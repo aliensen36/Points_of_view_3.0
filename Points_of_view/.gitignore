@@ -3,14 +3,24 @@ venv/
 *.pyc
 *.pyo
 __pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+.env
 
 # Django
 db.sqlite3
 *.log
 *.pot
-*.pyc
 *.swp
 *.swo
 *.DS_Store
 *.bak
 *.ini
+
+# Static files
+#/staticfiles/
+
+# Media files
+#/media/
