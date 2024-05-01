@@ -1,0 +1,27 @@
+# Virtual Environment
+venv/
+*.pyc
+*.pyo
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+.env
+.idea/
+
+# Django
+db.sqlite3
+*.log
+*.pot
+*.swp
+*.swo
+*.DS_Store
+*.bak
+*.ini
+
+# Static files
+#/staticfiles/
+
+# Media files
+/media/
