@@ -137,7 +137,7 @@ body {
 }
 
 .hero-btn {
-    padding: 11px 32px 11px 32px;
+    padding: 11px 32px;
     border-radius: 30px;
     color: var(--grey);
     background-color: var(--green);
@@ -216,7 +216,7 @@ body {
 }
 
 .skills-container {
-    padding: 76px 55px 171px;
+    padding: 76px 55px 156px;
 }
 
 .skills-subtitle {
@@ -253,4 +253,53 @@ body {
     line-height: 23px;
     text-align: center;
     color: var(--black);
+}
+
+.realization {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.realization-container {
+    padding: 60px 55px 100px;
+    border-radius: 30px;
+    background-color: var(--light-blue);
+}
+
+.realization-subtitle {
+    color: var(--grey);
+    margin-bottom: 60px;
+}
+
+.realization-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.realization-card {
+    width: 412px;
+    height: 550px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.relization-name {
+    position: absolute;
+    bottom: 88px;
+    left: 48px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 23px;
+    color: var(--grey);
+}
+
+.realization-role {
+    position: absolute;
+    bottom: 48px;
+    left: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    color: var(--grey);
 }

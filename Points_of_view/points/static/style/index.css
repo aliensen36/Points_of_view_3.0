@@ -198,7 +198,7 @@ body {
     color: var(--pink);
     font-size: 48px;
     font-weight: 600;
-    line-height: 60px;
+    line-height: 55px;
     text-align: center;
 }
 
@@ -221,7 +221,6 @@ body {
 
 .about-lab-description-small {
     margin-left: 307px;
-    margin-bottom: 152px;
     max-width: 720px;
     color: var(--black);
     font-size: 24px;

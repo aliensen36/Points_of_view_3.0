@@ -140,7 +140,7 @@ body {
 }
 
 .hero-btn {
-    padding: 11px 32px 11px 32px;
+    padding: 11px 32px;
     border-radius: 30px;
     color: var(--grey);
     background-color: var(--green);
@@ -176,4 +176,183 @@ body {
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
+}
+
+.about-project-left-arrow {
+    text-align: center;
+    line-height: 0;
+}
+
+.about-project-right {
+    max-width: 663px;
+    padding-top: 20px;
+}
+
+.about-project-right-subtitle {
+    margin-bottom: 23px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37.5px;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.about-project-right-descr {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.about-project-right-descr:not(:last-child) {
+    margin-bottom: 23px;
+}
+
+.about-project-2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.about-project-2-container {
+    padding: 60px 55px 100px;
+    border-radius: 30px;
+    background-color: var(--green);
+}
+
+.about-project-2-subtitle {
+    max-width: 1050px;
+    margin-bottom: 63px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37.5px;
+    color: var(--grey);
+    text-transform: uppercase;
+}
+
+.about-project-2-inner-container {
+    display: flex;
+}
+
+.about-project-2-left {
+    max-width: 740px;
+    margin-right: 40px;
+    padding: 58px 38px;
+    background-color: var(--rose);
+    border-radius: 30px;
+}
+
+.about-project-2-left-text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    color: var(--black);
+}
+
+.about-project-2-left-text:not(:last-child) {
+    margin-bottom: 23px;
+}
+
+.about-project-2-right-text {
+    padding: 29px 39px;
+    border-radius: 30px;
+    background-color: var(--rose);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--black);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.about-project-2-right-text:not(:last-child) {
+    margin-bottom: 39px;
+}
+
+.skills-container {
+    padding: 63px 55px 171px;
+}
+
+.skills-subtitle {
+    color: var(--pink);
+    margin-bottom: 60px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+}
+
+.skills-item {
+    width: 300px;
+    padding-top: 129px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.skills-list-subtitle {
+    margin: 0 auto;
+    margin-bottom: 17px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    color: var(--black);
+}
+
+.skills-list-descr {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+    color: var(--black);
+}
+
+.realization {
+    padding-bottom: 15px;
+}
+
+.realization-container {
+    padding: 60px 55px 100px;
+    border-radius: 30px;
+    background-color: var(--light-blue);
+}
+
+.realization-subtitle {
+    color: var(--grey);
+    margin-bottom: 60px;
+}
+
+.realization-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.realization-card {
+    position: relative;
+    width: 412px;
+    height: 550px;
+    background-color: var(--rose);
+    border-radius: 30px;
+}
+
+.relization-name {
+    position: absolute;
+    top: 438px;
+    left: 48px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 23px;
+    color: var(--grey);
+}
+
+.realization-role {
+    position: absolute;
+    top: 478px;
+    left: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    color: var(--grey);
 }
