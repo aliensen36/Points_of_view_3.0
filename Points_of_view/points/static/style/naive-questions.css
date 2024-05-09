@@ -92,6 +92,16 @@ body {
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
+    color: var(--black);
+    transition: color 0.3s ease-in-out;
+}
+
+.header-nav-link:hover {
+    color: #01A582;
+}
+
+.header-nav-link:active {
+    color: #136856;
 }
 
 .contacts {
@@ -103,6 +113,19 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.contacts-item circle {
+    fill: var(--green);
+    transition: fill 0.3s ease-in-out;
+}
+
+.contacts-item:hover circle {
+    fill: #01A582;
+}
+
+.contacts-item:active circle {
+    fill: #136856;
 }
 
 .hero {
@@ -144,6 +167,15 @@ body {
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+    background-color: #01A582;
+}
+
+.hero-btn:active {
+    background-color: #136856;
 }
 
 .about-project-container {
