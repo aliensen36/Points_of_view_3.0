@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html lang="ru">
 
 <head>
@@ -22,27 +23,46 @@
             <nav class="header-nav">
                 <ul class="header-nav-list">
                     <li class="header-nav-item">
-                        <a href="index.html" class="header-nav-link">
-                            О лаборатории
+                        <a href="{% url 'index' %}" class="header-nav-link">
+                            {% translate 'О лаборатории' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="#projects" class="header-nav-link">
-                            Проекты
+                            {% translate 'Проекты' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
-                        <a href="portfolio.html" class="header-nav-link">
-                            Портфолио
+                        <a href="{% url 'portfolio' %}" class="header-nav-link">
+                            {% translate 'Портфолио' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
-                        <a href="contacts.html" class="header-nav-link">
-                            Контакты
+                        <a href="{% url 'contacts' %}" class="header-nav-link">
+                            {% translate 'Контакты' %}
                         </a>
                     </li>
                 </ul>
             </nav>
+
+
+
+
+<form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}">
+    {% get_available_languages as LANGUAGES %}
+    {% for lang_code, lang_name in LANGUAGES %}
+        <label class="toggle">
+            <input type="checkbox" name="language" value="{{ lang_code }}">
+            <span class="slider"></span>
+            {{ lang_name }}
+        </label>
+    {% endfor %}
+    <button type="submit">Выбрать</button>
+</form>
+
+
 
             <ul class="contacts">
                 <li class="contacts-item">
@@ -86,13 +106,13 @@
         <section class="hero container">
             <div class="hero-container">
                 <h1 class="hero-title">
-                    Новая <span class="hero-title--color-pink">точка зрения</span> на искусство
+                    {% translate 'Новая' %} <span class="hero-title--color-pink">{% translate 'точка зрения' %}</span> {% translate 'на искусство' %}
                 </h1>
                 <p class="hero-text">
-                    Арт-лаборатория, открывающая искусство по-новому.
+                    {% translate 'Арт-лаборатория, открывающая искусство по-новому' %}.
                 </p>
                 <button class="hero-btn">
-                    Подробнее
+                    {% translate 'Подробнее' %}
                 </button>
             </div>
         </section>
@@ -100,41 +120,41 @@
         <section class="about-lab container">
             <div class="about-lab-container">
                 <h2 class="subtitle about-lab-subtitle">
-                    о лаборатории
+                    {% translate 'о лаборатории' %}
                 </h2>
                 <div class="about-lab-cards-container">
                     <div class="about-lab-card">
-                        Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их
-                        талантов.
+                        {% translate 'Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их' %}
+                        {% translate 'талантов' %}.
                     </div>
                     <div class="about-lab-card">
-                        Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения
-                        художников.
+                        {% translate 'Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения' %}
+                        {% translate 'художников' %}.
                     </div>
                     <div class="about-lab-card">
                         <ul>
-                            3 ярких направления нашего творчества:
-                            <li>арт дайвинг;</li>
-                            <li>наивные вопросы художнику;</li>
-                            <li>арт-картель.</li>
+                            {% translate '3 ярких направления нашего творчества' %}:
+                            <li>{% translate 'арт-дайвинг' %};</li>
+                            <li>{% translate 'наивные вопросы художнику' %};</li>
+                            <li>{% translate 'арт-картель' %}.</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <p class="about-lab-description-big">
-                В лаборатории
+                {% translate 'В лаборатории' %}
                 <span class="about-lab-description-big--rectangle">
                     <svg width="124" height="35" viewBox="0 0 124 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="124" height="35" rx="17.5" fill="#198F76" />
                     </svg>
                 </span>
-                “Т
+                “{% translate 'Т' %}
                 <span class="about-lab-description-big--circle">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15" cy="15" r="15" fill="#799FCC" />
                     </svg>
                 </span>
-                чки зрения” каждый участник художе
+                {% translate 'чки зрения” каждый участник художе' %}
                 <span class="about-lab-description-big--semicircle">
                     <svg width="24" height="48" viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -142,14 +162,14 @@
                             fill="#198F76" />
                     </svg>
                 </span>
-                твенного
+                {% translate 'твенного' %}
                 <span class="about-lab-description-big--rectangle">
                     <svg width="124" height="35" viewBox="0 0 124 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="124" height="35" rx="17.5" fill="#799FCC" />
                     </svg>
                 </span>
                 <br>
-                пр
+                {% translate 'пр' %}
                 <span class="about-lab-description-big--circle">
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -157,28 +177,28 @@
                             fill="#799FCC" />
                     </svg>
                 </span>
-                екта - автор.
+                {% translate 'екта - автор' %}.
             </p>
             <p class="about-lab-description-small">
-                В то же время авторство теряется и приумаляется в угоду большего - нового, рожденного синтезом общих
-                вложений. Творчество «для другого».
+                {% translate 'В то же время авторство теряется и приумаляется в угоду большего - нового, рожденного синтезом общих' %}
+                {% translate 'вложений. Творчество «для другого»' %}.
             </p>
         </section>
 
         <section class="projects container" id="projects">
             <div class="projects-container">
                 <h2 class="subtitle projects-subtitle">
-                    проекты
+                    {% translate 'проекты' %}
                 </h2>
                 <div class="projects-cards-container">
                     <div class="project-card project-card--1">
                         <h4 class="project-card-subtitle">
-                            Арт-дайвинг
+                            {% translate 'Арт-дайвинг' %}
                         </h4>
                         <p class="project-card-description">
-                            Арт-дайвинг это аудио-сеансы погружения в картину в стенах галереи. Зритель подходит к
-                            картине, наводит свой смартфон на QR код рядом с картиной, надевает наушники и запускает
-                            сеанс медиации.
+                            {% translate 'Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи. Зритель подходит к' %}
+                            {% translate 'картине, наводит свой смартфон на QR код рядом с картиной, надевает наушники и запускает' %}
+                            {% translate 'сеанс медиации' %}.
                         </p>
                         <a href="art-diving.html" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
@@ -192,11 +212,11 @@
                     </div>
                     <div class="project-card project-card--2">
                         <h4 class="project-card-subtitle">
-                            Наивные вопросы художнику
+                            {% translate 'Наивные вопросы художнику' %}
                         </h4>
                         <p class="project-card-description">
-                            Наивные вопросы художнику - это видеоинтервью, на которых художник раскрывается с
-                            человеческого ракурса.
+                            {% translate 'Наивные вопросы художнику - это видеоинтервью, на которых художник раскрывается с' %}
+                            {% translate 'человеческого ракурса' %}.
                         </p>
                         <a href="naive-questions.html" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
@@ -210,15 +230,15 @@
                     </div>
                     <div class="project-card project-card--3">
                         <h4 class="project-card-subtitle">
-                            Арт-картель
+                            {% translate 'Арт-картель' %}
                         </h4>
                         <p class="project-card-description">
-                            Арт-картель это форма совместного изучения интересующего, без учителя и господствующей точки
-                            зрения.
+                            {% translate 'Арт-картель это форма совместного изучения интересующего, без учителя и господствующей точки' %}
+                            {% translate 'зрения' %}.
                         </p>
                         <p class="project-card-description">
-                            В формате малой группы 8-10 человек мы самостоятельно изучаем материал и обсуждаем его на
-                            онлайн-встречах.
+                            {% translate 'В формате малой группы 8-10 человек мы самостоятельно изучаем материал и обсуждаем его на' %}
+                            {% translate 'онлайн-встречах' %}.
                         </p>
                         <a href="art-cartel.html" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
@@ -237,7 +257,7 @@
         <section class="team container" id="team">
             <div class="team-container">
                 <h2 class="subtitle team-subtitle">
-                    Команда
+                    {% translate 'Команда' %}
                 </h2>
                 <div class="team-carousel-container">
                     <div class="team-carousel-slide-bar">
@@ -288,7 +308,7 @@
             </nav>
             <ul class="footer-contacts-list">
                 <h3 class="footer-contacts-subtitle">
-                    Контакты
+                    {% translate 'Контакты' %}
                 </h3>
                 <li class="footer-contacts-item">
                     andrey.gunyavin@gmail.com
