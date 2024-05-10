@@ -44,26 +44,19 @@
                     </li>
                 </ul>
             </nav>
-
-
-
-
-<form action="{% url 'set_language' %}" method="post">
-    {% csrf_token %}
-    <input name="next" type="hidden" value="{{ redirect_to }}">
-    {% get_available_languages as LANGUAGES %}
-    {% for lang_code, lang_name in LANGUAGES %}
-        <label class="toggle">
-            <input type="checkbox" name="language" value="{{ lang_code }}">
-            <span class="slider"></span>
-            {{ lang_name }}
-        </label>
-    {% endfor %}
-    <button type="submit">Выбрать</button>
-</form>
-
-
-
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}">
+                {% get_available_languages as LANGUAGES %}
+                {% for lang_code, lang_name in LANGUAGES %}
+                <label class="toggle">
+                    <input type="checkbox" name="language" value="{{ lang_code }}">
+                    <span class="slider"></span>
+                    {{ lang_name }}
+                </label>
+                {% endfor %}
+                <button type="submit">Выбрать</button>
+            </form>
             <ul class="contacts">
                 <li class="contacts-item">
                     <a href="tel:+79169552926">
@@ -106,7 +99,8 @@
         <section class="hero container">
             <div class="hero-container">
                 <h1 class="hero-title">
-                    {% translate 'Новая' %} <span class="hero-title--color-pink">{% translate 'точка зрения' %}</span> {% translate 'на искусство' %}
+                    {% translate 'Новая' %} <span class="hero-title--color-pink">{% translate 'точка зрения' %}</span>
+                    {% translate 'на искусство' %}
                 </h1>
                 <p class="hero-text">
                     {% translate 'Арт-лаборатория, открывающая искусство по-новому' %}.
@@ -124,11 +118,13 @@
                 </h2>
                 <div class="about-lab-cards-container">
                     <div class="about-lab-card">
-                        {% translate 'Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной реализации их' %}
+                        {% translate 'Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной
+                        реализации их' %}
                         {% translate 'талантов' %}.
                     </div>
                     <div class="about-lab-card">
-                        {% translate 'Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и произведения' %}
+                        {% translate 'Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и
+                        произведения' %}
                         {% translate 'художников' %}.
                     </div>
                     <div class="about-lab-card">
@@ -180,7 +176,8 @@
                 {% translate 'екта - автор' %}.
             </p>
             <p class="about-lab-description-small">
-                {% translate 'В то же время авторство теряется и приумаляется в угоду большего - нового, рожденного синтезом общих' %}
+                {% translate 'В то же время авторство теряется и приумаляется в угоду большего - нового, рожденного
+                синтезом общих' %}
                 {% translate 'вложений. Творчество «для другого»' %}.
             </p>
         </section>
@@ -196,8 +193,10 @@
                             {% translate 'Арт-дайвинг' %}
                         </h4>
                         <p class="project-card-description">
-                            {% translate 'Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи. Зритель подходит к' %}
-                            {% translate 'картине, наводит свой смартфон на QR код рядом с картиной, надевает наушники и запускает' %}
+                            {% translate 'Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи. Зритель
+                            подходит к' %}
+                            {% translate 'картине, наводит свой смартфон на QR код рядом с картиной, надевает наушники и
+                            запускает' %}
                             {% translate 'сеанс медиации' %}.
                         </p>
                         <a href="art-diving.html" class="project-card-link">
@@ -215,7 +214,8 @@
                             {% translate 'Наивные вопросы художнику' %}
                         </h4>
                         <p class="project-card-description">
-                            {% translate 'Наивные вопросы художнику - это видеоинтервью, на которых художник раскрывается с' %}
+                            {% translate 'Наивные вопросы художнику - это видеоинтервью, на которых художник
+                            раскрывается с' %}
                             {% translate 'человеческого ракурса' %}.
                         </p>
                         <a href="naive-questions.html" class="project-card-link">
@@ -233,11 +233,13 @@
                             {% translate 'Арт-картель' %}
                         </h4>
                         <p class="project-card-description">
-                            {% translate 'Арт-картель это форма совместного изучения интересующего, без учителя и господствующей точки' %}
+                            {% translate 'Арт-картель это форма совместного изучения интересующего, без учителя и
+                            господствующей точки' %}
                             {% translate 'зрения' %}.
                         </p>
                         <p class="project-card-description">
-                            {% translate 'В формате малой группы 8-10 человек мы самостоятельно изучаем материал и обсуждаем его на' %}
+                            {% translate 'В формате малой группы 8-10 человек мы самостоятельно изучаем материал и
+                            обсуждаем его на' %}
                             {% translate 'онлайн-встречах' %}.
                         </p>
                         <a href="art-cartel.html" class="project-card-link">
