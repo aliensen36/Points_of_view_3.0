@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наивные вопросы художнику</title>
+    <title>{% translate 'Наивные вопросы художнику' %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
@@ -23,22 +24,22 @@
                 <ul class="header-nav-list">
                     <li class="header-nav-item">
                         <a href="{% url 'index' %}" class="header-nav-link">
-                            О лаборатории
+                            {% translate 'О лаборатории' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="#projects" class="header-nav-link">
-                            Проекты
+                            {% translate 'Проекты' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="portfolio.html" class="header-nav-link">
-                            Портфолио
+                            {% translate 'Портфолио' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="contacts.html" class="header-nav-link">
-                            Контакты
+                            {% translate 'Контакты' %}
                         </a>
                     </li>
                 </ul>
@@ -98,17 +99,17 @@
         <section class="hero container">
             <div class="hero-container">
                 <h1 class="hero-title">
-                    наивные вопросы художнику
+                    {% translate 'наивные вопросы художнику' %}
                 </h1>
                 <p class="hero-text">
-                    Человеку интересен человек.
+                    {% translate 'Человеку интересен человек' %}.
                 </p>
                 <button class="hero-btn" onclick="window.scrollTo({
                     top: 720,
                     left: 0,
                     behavior: 'smooth'
                     })">
-                    Подробнее
+                    {% translate 'Подробнее' %}
                 </button>
             </div>
         </section>
@@ -116,25 +117,27 @@
         <section class="about-project">
             <div class="container about-project-container">
                 <h2 class="subtitle about-project-subtitle">
-                    о проекте
+                    {% translate 'о проекте' %}
                 </h2>
                 <div class="about-project-wrap">
                     <img src="../static/img/naive-question-about.png" alt="video interview with the artist">
                     <div class="about-project-inner-wrapper">
                         <p class="about-project-descr-big">
-                            Наивные вопросы художнику - это видеоинтервью, на которых художник раскрывается
-                            с человеческого ракурса.
+                            {% translate 'Наивные вопросы художнику - это видеоинтервью, на которых художник' %}
+                            {% translate 'раскрывается с человеческого ракурса' %}.
                         </p>
                         <p class="about-project-descr-small">
-                            Человеку интересен не художник, а именно человек: с человеческой судьбой, понятными
-                            радостями и сложностями. Интересен контекст, в котором создавались произведения, условия и
-                            обстоятельства сформировавшие мировоззрение артиста.
+                            {% translate 'Человеку интересен не художник, а именно человек: с человеческой судьбой' %},
+                            {% translate 'понятными радостями и сложностями. Интересен контекст, в котором' %}
+                            {% translate 'создавались произведения, условия и обстоятельства сформировавшие' %}
+                            {% translate 'мировоззрение артиста' %}.
                         </p>
                         <p class="about-project-descr-small">
-                            Проект “Наивные вопросы художнику” показывает и рассказывает о том, что предшествует
-                            рождению произведений - об извилистых тропах жизни художника. Зритель слышит голос
-                            художника, видит его мимику и жесту, узнаёт его мировозрение и оказывается способен
-                            посмотреть глазами художника на его произведение, прочувствовать замысел.
+                            {% translate 'Проект “Наивные вопросы художнику” показывает и рассказывает о том' %},
+                            {% translate 'что предшествует рождению произведений - об извилистых тропах жизни' %}
+                            {% translate 'художника. Зритель слышит голос художника, видит его мимику и жесту' %},
+                            {% translate 'узнаёт его мировозрение и оказывается способен посмотреть глазами' %}
+                            {% translate 'художника на его произведение, прочувствовать замысел' %}.
                         </p>
                     </div>
                 </div>
@@ -144,13 +147,15 @@
         <section class="about-project-2">
             <div class="container about-project-2-container">
                 <p class="about-project-2-descr-big">
-                    Проект “наивные вопросы” открывает зрителю возможность настроить себя на восприятие работ художника
-                    и задуматься над самой масштабной и противоречивой работой - над картиной мира художника
+                    {% translate 'Проект “наивные вопросы” открывает зрителю возможность настроить себя на' %}
+                    {% translate 'восприятие работ художника и задуматься над самой масштабной и противоречивой' %}
+                    {% translate 'работой - над картиной мира художника' %}
                 </p>
                 <p class="about-project-2-descr-small">
-                    Сквозь “наивные вопросы” художник становится ближе зрителю. Зрителю не предлагается интерпретация
-                    или способ понимания произведения художника. Зритель знакомится с жизнью художника самостоятельно
-                    выделяя слагаемые образовавшие целое - художника и его произведения.
+                    {% translate 'Сквозь “наивные вопросы” художник становится ближе зрителю. Зрителю не' %}
+                    {% translate 'предлагается интерпретация или способ понимания произведения художника. Зритель' %}
+                    {% translate 'знакомится с жизнью художника самостоятельно выделяя слагаемые образовавшие целое' %}
+                    {% translate '- художника и его произведения' %}.
                 </p>
             </div>
         </section>
@@ -158,33 +163,34 @@
         <section class="skills">
             <div class="container skills-container">
                 <h2 class="subtitle skills-subtitle">
-                    что мы умеем?
+                    {% translate 'что мы умеем?' %}
                 </h2>
                 <ul class="skills-list">
                     <li class="skills-item skills-item-1">
                         <h3 class="skills-list-subtitle">
-                            1. Раскрыть художника
+                            1. {% translate 'Раскрыть художника' %}
                         </h3>
                         <p class="skills-list-descr">
-                            Решаем проблему конфликта с художником: художник человек, контекст его биографии это
-                            предтеча им создаваемого
+                            {% translate 'Решаем проблему конфликта с художником: художник человек, контекст его' %}
+                            {% translate 'биографии это предтеча им создаваемого' %}
                         </p>
                     </li>
                     <li class="skills-item skills-item-2">
                         <h3 class="skills-list-subtitle">
-                            2. Передать визуально
+                            2. {% translate 'Передать визуально' %}
                         </h3>
                         <p class="skills-list-descr">
-                            У нас видеотворчество - используем и снятый на камеру материал, и эксперменты AI, так, чтобы
-                            выглядело под стать художнику
+                            {% translate 'У нас видеотворчество - используем и снятый на камеру материал, и' %}
+                            {% translate 'эксперменты AI, так, чтобы выглядело под стать художнику' %}
                         </p>
                     </li>
                     <li class="skills-item skills-item-3">
                         <h3 class="skills-list-subtitle">
-                            3. Оформить
+                            3. {% translate 'Оформить' %}
                         </h3>
                         <p class="skills-list-descr">
-                            Художник должен быть найден и по смежным запросам. Осуществляется дубляж на английском языке
+                            {% translate 'Художник должен быть найден и по смежным запросам. Осуществляется дубляж' %}
+                            {% translate 'на английском языке' %}
                         </p>
                     </li>
                 </ul>
@@ -194,7 +200,7 @@
         <section class="realization">
             <div class="container realization-container">
                 <h2 class="subtitle realization-subtitle">
-                    реализация
+                    {% translate 'реализация' %}
                 </h2>
                 <div class="realization-wrap">
                     <div class="realization-card">
@@ -203,25 +209,25 @@
                             Ayumi Adachi
                         </h3>
                         <p class="realization-role">
-                            японская художница
+                            {% translate 'японская художница' %}
                         </p>
                     </div>
                     <div class="realization-card">
                         <img src="../static/img/Hayk-Adamyan.png" alt="photo of Hayk Adamyan">
                         <h3 class="relization-name">
-                            Айк Адамян
+                            {% translate 'Айк Адамян' %}
                         </h3>
                         <p class="realization-role">
-                            фотограф
+                            {% translate 'фотограф' %}
                         </p>
                     </div>
                     <div class="realization-card">
                         <img src="../static/img/Alexey-Manukyan.png" alt="photo of Alexey Manukyan">
                         <h3 class="relization-name">
-                            Алексей Манукян
+                            {% translate 'Алексей Манукян' %}
                         </h3>
                         <p class="realization-role">
-                            художник
+                            {% translate 'художник' %}
                         </p>
                     </div>
                 </div>
