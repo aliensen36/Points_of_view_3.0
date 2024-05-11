@@ -46,14 +46,14 @@
             <form action="{% url 'set_language' %}" method="post">
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ redirect_to }}">
-                {% get_available_languages as LANGUAGES %}
-                {% for lang_code, lang_name in LANGUAGES %}
-                <label class="toggle">
-                    <input type="checkbox" name="language" value="{{ lang_code }}">
-                    <span class="slider"></span>
-                    {{ lang_name }}
-                </label>
-                {% endfor %}
+                <label>
+                    <input type="radio" name="language" value="ru" {% if LANGUAGE_CODE == 'ru' %}checked{% endif %}>
+                    Русский
+                </label><br>
+                <label>
+                    <input type="radio" name="language" value="en" {% if LANGUAGE_CODE == 'en' %}checked{% endif %}>
+                    English
+                </label><br>
                 <button type="submit">Выбрать</button>
             </form>
             <ul class="contacts">
