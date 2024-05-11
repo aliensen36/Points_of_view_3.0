@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from .models import *
+
 
 def index(request):
-    return render(request, 'index.html')
+    teams = Team.objects.all()
+    return render(request, 'index.html', {'teams': teams})
 
 def art_cartel(request):
     return render(request, 'art-cartel.html')
