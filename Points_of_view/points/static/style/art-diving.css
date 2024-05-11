@@ -320,6 +320,24 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
+    background-repeat: no-repeat;
+    background-position: top 20px left 105px;
+}
+
+.skills-item-1 {
+    background-image: url('../img/diving-skills-1.svg');
+}
+
+.skills-item-2 {
+    background-image: url('../img/diving-skills-2.svg');
+}
+
+.skills-item-3 {
+    background-image: url('../img/diving-skills-3.svg');
+}
+
+.skills-item-4 {
+    background-image: url('../img/diving-skills-4.svg');
 }
 
 .skills-list-subtitle {
