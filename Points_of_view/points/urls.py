@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import TeamListAPIView
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -8,4 +9,5 @@ urlpatterns = [
     path('contacts/', views.contacts, name='contacts'),
     path('naive_questions/', views.naive_questions, name='naive-questions'),
     path('portfolio/', views.portfolio, name='portfolio'),
+    path('api/team/', TeamListAPIView.as_view(), name='team_api'),
 ]

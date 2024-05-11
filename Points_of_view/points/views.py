@@ -1,7 +1,12 @@
 from django.shortcuts import render
+from .models import *
+from rest_framework import generics
+from .serializers import TeamSerializer
+
 
 def index(request):
-    return render(request, 'index.html')
+    teams = Team.objects.all()
+    return render(request, 'index.html', {'teams': teams})
 
 def art_cartel(request):
     return render(request, 'art-cartel.html')
@@ -18,3 +23,6 @@ def naive_questions(request):
 def portfolio(request):
     return render(request, 'portfolio.html')
 
+class TeamListAPIView(generics.ListAPIView):
+    queryset = Team.objects.all()
+    serializer_class = TeamSerializer

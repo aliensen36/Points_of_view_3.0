@@ -118,14 +118,12 @@
                 </h2>
                 <div class="about-lab-cards-container">
                     <div class="about-lab-card">
-                        {% translate 'Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной прикладной
-                        реализации их' %}
-                        {% translate 'талантов' %}.
+                        {% translate 'Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной' %}
+                        {% translate 'прикладной реализации их талантов' %}.
                     </div>
                     <div class="about-lab-card">
-                        {% translate 'Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем зрителей и
-                        произведения' %}
-                        {% translate 'художников' %}.
+                        {% translate 'Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем' %}
+                        {% translate 'зрителей и произведения художников' %}.
                     </div>
                     <div class="about-lab-card">
                         <ul>
@@ -176,9 +174,8 @@
                 {% translate 'екта - автор' %}.
             </p>
             <p class="about-lab-description-small">
-                {% translate 'В то же время авторство теряется и приумаляется в угоду большего - нового, рожденного
-                синтезом общих' %}
-                {% translate 'вложений. Творчество «для другого»' %}.
+                {% translate 'В то же время авторство теряется и приумаляется в угоду большего - нового,' %}
+                {% translate 'рожденного синтезом общих вложений. Творчество «для другого»' %}.
             </p>
         </section>
 
@@ -193,13 +190,11 @@
                             {% translate 'Арт-дайвинг' %}
                         </h4>
                         <p class="project-card-description">
-                            {% translate 'Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи. Зритель
-                            подходит к' %}
-                            {% translate 'картине, наводит свой смартфон на QR код рядом с картиной, надевает наушники и
-                            запускает' %}
-                            {% translate 'сеанс медиации' %}.
+                            {% translate 'Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи' %}.
+                            {% translate 'Зритель подходит к картине, наводит свой смартфон на QR код рядом' %}
+                            {% translate 'с картиной, надевает наушники и запускает сеанс медиации' %}.
                         </p>
-                        <a href="art-diving.html" class="project-card-link">
+                        <a href="{% url 'art-diving' %}" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="25" cy="25" r="25" fill="none" />
@@ -214,11 +209,10 @@
                             {% translate 'Наивные вопросы художнику' %}
                         </h4>
                         <p class="project-card-description">
-                            {% translate 'Наивные вопросы художнику - это видеоинтервью, на которых художник
-                            раскрывается с' %}
-                            {% translate 'человеческого ракурса' %}.
+                            {% translate 'Наивные вопросы художнику - это видеоинтервью, на которых художник' %}
+                            {% translate 'раскрывается с человеческого ракурса' %}.
                         </p>
-                        <a href="naive-questions.html" class="project-card-link">
+                        <a href="{% url 'naive-questions' %}" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="25" cy="25" r="25" fill="none" />
@@ -233,16 +227,14 @@
                             {% translate 'Арт-картель' %}
                         </h4>
                         <p class="project-card-description">
-                            {% translate 'Арт-картель это форма совместного изучения интересующего, без учителя и
-                            господствующей точки' %}
-                            {% translate 'зрения' %}.
+                            {% translate 'Арт-картель это форма совместного изучения интересующего, без учителя и' %}
+                            {% translate 'господствующей точки зрения' %}.
                         </p>
                         <p class="project-card-description">
-                            {% translate 'В формате малой группы 8-10 человек мы самостоятельно изучаем материал и
-                            обсуждаем его на' %}
-                            {% translate 'онлайн-встречах' %}.
+                            {% translate 'В формате малой группы 8-10 человек мы самостоятельно изучаем материал и' %}
+                            {% translate 'обсуждаем его на онлайн-встречах' %}.
                         </p>
-                        <a href="art-cartel.html" class="project-card-link">
+                        <a href="{% url 'art-cartel' %}" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="25" cy="25" r="25" fill="none" />
@@ -292,19 +284,19 @@
             <nav class="footer-nav">
                 <ul class="footer-nav-list">
                     <li class="footer-nav-item">
-                        <a href="index.html" class="footer-nav-link">О лаборатории</a>
+                        <a href="{% url 'index' %}" class="footer-nav-link">{% translate 'О лаборатории' %}</a>
                     </li>
                     <li class="footer-nav-item">
-                        <a href="#projects" class="footer-nav-link">Проекты</a>
+                        <a href="#projects" class="footer-nav-link">{% translate 'Проекты' %}</a>
                     </li>
                     <li class="footer-nav-item">
-                        <a href="portfolio.html" class="footer-nav-link">Портфолио</a>
+                        <a href="{% url 'portfolio' %}" class="footer-nav-link">{% translate 'Портфолио' %}</a>
                     </li>
                     <li class="footer-nav-item">
-                        <a href="#team" class="footer-nav-link">Команда</a>
+                        <a href="#team" class="footer-nav-link">{% translate 'Команда' %}</a>
                     </li>
                     <li class="footer-nav-item">
-                        <a href="contacts.html" class="footer-nav-link">Контакты</a>
+                        <a href="{% url 'contacts' %}" class="footer-nav-link">{% translate 'Контакты' %}</a>
                     </li>
                 </ul>
             </nav>

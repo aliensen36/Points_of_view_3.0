@@ -10,6 +10,7 @@ class TeamAdmin(TranslationAdmin):
     search_fields = ('name', 'role',)
     fields = ('name', 'photo', 'preview', 'role')
     readonly_fields = ["preview"]
+    ordering = ('name',)
 
     def preview(self, obj):
         return mark_safe(f'<img src="{obj.photo.url}" style="max-width:100px; max-height:150px;">')
