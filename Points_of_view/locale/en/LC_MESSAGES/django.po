@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-11 14:27+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\Points_of_view\settings.py:103
+msgid "Russian"
+msgstr ""
+
+#: .\Points_of_view\settings.py:104
+msgid "English"
+msgstr ""
+
+#: .\points\templates\index.html:27 .\points\templates\index.html:287
+msgid "О лаборатории"
+msgstr "About the laboratory"
+
+#: .\points\templates\index.html:32 .\points\templates\index.html:290
+msgid "Проекты"
+msgstr "Projects"
+
+#: .\points\templates\index.html:37 .\points\templates\index.html:293
+msgid "Портфолио"
+msgstr "Portfolio"
+
+#: .\points\templates\index.html:42 .\points\templates\index.html:299
+#: .\points\templates\index.html:305
+msgid "Контакты"
+msgstr "Contacts"
+
+#: .\points\templates\index.html:102
+msgid "Новая"
+msgstr "New"
+
+#: .\points\templates\index.html:102
+msgid "точка зрения"
+msgstr "point of view"
+
+#: .\points\templates\index.html:103
+msgid "на искусство"
+msgstr "on art"
+
+#: .\points\templates\index.html:106
+msgid "Арт-лаборатория, открывающая искусство по-новому"
+msgstr "An art laboratory that discovers art in a new way"
+
+#: .\points\templates\index.html:109
+msgid "Подробнее"
+msgstr "More details"
+
+#: .\points\templates\index.html:117
+msgid "о лаборатории"
+msgstr "About the laboratory"
+
+#: .\points\templates\index.html:121
+msgid "Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной"
+msgstr "The art laboratory “Points of View” brings together creative people"
+
+#: .\points\templates\index.html:122
+msgid "прикладной реализации их талантов"
+msgstr "in the jointapplication of their talents"
+
+#: .\points\templates\index.html:125
+msgid "Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем"
+msgstr "We create amazing things with the help of music, words and graphics,"
+
+#: .\points\templates\index.html:126
+msgid "зрителей и произведения художников"
+msgstr "bringing viewers and the works of artists"
+
+#: .\points\templates\index.html:130
+msgid "3 ярких направления нашего творчества"
+msgstr "3 bright areas of our creativity"
+
+#: .\points\templates\index.html:131
+msgid "арт-дайвинг"
+msgstr "Art diving"
+
+#: .\points\templates\index.html:132
+msgid "наивные вопросы художнику"
+msgstr "naive questions to the artist"
+
+#: .\points\templates\index.html:133
+msgid "арт-картель"
+msgstr "art cartel"
+
+#: .\points\templates\index.html:139
+msgid "В лаборатории"
+msgstr "In the laboratory"
+
+#: .\points\templates\index.html:145
+msgid "Т"
+msgstr "P"
+
+#: .\points\templates\index.html:151
+msgid "чки зрения” каждый участник художе"
+msgstr "ints of view” each parti"
+
+#: .\points\templates\index.html:159
+msgid "твенного"
+msgstr "ipant in an art"
+
+#: .\points\templates\index.html:166
+msgid "пр"
+msgstr "pr"
+
+#: .\points\templates\index.html:174
+msgid "екта - автор"
+msgstr "ject is an author"
+
+#: .\points\templates\index.html:177
+msgid ""
+"В то же время авторство теряется и приумаляется в угоду большего - нового,"
+msgstr "At the same time, authorship is lost and diminished in favor of something greater -"
+
+#: .\points\templates\index.html:178
+msgid "рожденного синтезом общих вложений. Творчество «для другого»"
+msgstr " new, born from the synthesis of common investments. Creativity «for another»"
+
+#: .\points\templates\index.html:185
+msgid "проекты"
+msgstr "Projects"
+
+#: .\points\templates\index.html:190
+msgid "Арт-дайвинг"
+msgstr "Art diving"
+
+#: .\points\templates\index.html:193
+msgid "Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи"
+msgstr ""
+"Art diving is an audio session of immersing yourself in a painting within "
+"the walls of a gallery"
+
+#: .\points\templates\index.html:194
+msgid "Зритель подходит к картине, наводит свой смартфон на QR код рядом"
+msgstr ""
+"The viewer approaches the painting, points his smartphone at the QR code "
+"next to"
+
+#: .\points\templates\index.html:195
+msgid "с картиной, надевает наушники и запускает сеанс медиации"
+msgstr "the painting, puts on headphones and starts a mediation session"
+
+#: .\points\templates\index.html:209
+msgid "Наивные вопросы художнику"
+msgstr "Naive questions for the artist"
+
+#: .\points\templates\index.html:212
+msgid "Наивные вопросы художнику - это видеоинтервью, на которых художник"
+msgstr "Naive questions for the artist are video interviews in which the artist"
+
+#: .\points\templates\index.html:213
+msgid "раскрывается с человеческого ракурса"
+msgstr "reveals himself from a human perspective"
+
+#: .\points\templates\index.html:227
+msgid "Арт-картель"
+msgstr "Art cartel"
+
+#: .\points\templates\index.html:230
+msgid "Арт-картель это форма совместного изучения интересующего, без учителя и"
+msgstr ""
+"Art cartel is a form of joint study of something of interest, without a "
+"teacher"
+
+#: .\points\templates\index.html:231
+msgid "господствующей точки зрения"
+msgstr "or a dominant pointteacher"
+
+#: .\points\templates\index.html:234
+msgid ""
+"В формате малой группы 8-10 человек мы самостоятельно изучаем материал и"
+msgstr ""
+"In a small group format of 8-10 people, we independently study the material"
+
+#: .\points\templates\index.html:235
+msgid "обсуждаем его на онлайн-встречах"
+msgstr "and discuss it in online meetings"
+
+#: .\points\templates\index.html:254 .\points\templates\index.html:296
+msgid "Команда"
+msgstr "Team"
