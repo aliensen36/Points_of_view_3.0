@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import *
+from rest_framework import generics
+from .serializers import TeamSerializer
 
 
 def index(request):
@@ -21,3 +23,6 @@ def naive_questions(request):
 def portfolio(request):
     return render(request, 'portfolio.html')
 
+class TeamListAPIView(generics.ListAPIView):
+    queryset = Team.objects.all()
+    serializer_class = TeamSerializer
