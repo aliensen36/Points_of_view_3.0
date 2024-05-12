@@ -21,7 +21,8 @@
     <header class="header container">
         <div class="header-container">
             <div class="header-logo">
-                <img src="../static/img/logo-1.svg" alt="logo">
+<!--                <img src="../static/img/logo-1.svg" alt="logo">-->
+                <img src="{% static 'img/logo-1.svg' %}" alt="logo">
             </div>
             <nav class="header-nav">
                 <ul class="header-nav-list">
@@ -36,12 +37,12 @@
                         </a>
                     </li>
                     <li class="header-nav-item">
-                        <a href="portfolio.html" class="header-nav-link">
+                        <a href="{% url 'portfolio' %}" class="header-nav-link">
                             Портфолио
                         </a>
                     </li>
                     <li class="header-nav-item">
-                        <a href="contacts.html" class="header-nav-link">
+                        <a href="{% url 'contacts' %}" class="header-nav-link">
                             Контакты
                         </a>
                     </li>
@@ -128,7 +129,8 @@
                     о проекте
                 </h2>
                 <div class="about-project-wrap">
-                    <img src="../static/img/art-cartel.png" alt="photo of the art cartel meeting">
+<!--                    <img src="../static/img/art-cartel.png" alt="photo of the art cartel meeting">-->
+                    <img src="{% static 'img/art-cartel.png' %}" alt="photo of the art cartel meeting">
                     <div class="about-project-inner-wrap">
                         <p class="about-project-descr-big">
                             Арт-картель это форма совместного изучения интересующего.<br>Без учителя и господствующей
