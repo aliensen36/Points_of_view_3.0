@@ -4,6 +4,7 @@ class Team(models.Model):
     photo = models.ImageField(upload_to='team', verbose_name='Фото')
     name = models.CharField(max_length=200, verbose_name='Имя')
     role = models.TextField(verbose_name='Роль в команде')
+    user_number = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -11,7 +12,7 @@ class Team(models.Model):
     class Meta:
         verbose_name_plural = 'Члены команды'
         verbose_name = 'Команда'
-        ordering = ['name']
+        ordering = ['user_number']
 
 
 class Project(models.Model):
