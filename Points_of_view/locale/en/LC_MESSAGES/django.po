@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-11 23:27+0300\n"
+"POT-Creation-Date: 2024-05-14 19:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,331 +26,178 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: .\points\templates\index.html:8
-msgid "Точки зрения"
-msgstr "point of view"
+#: .\points\templates\art-diving.html:9
+msgid "Арт-дайвинг"
+msgstr "Art diving"
 
-#: .\points\templates\index.html:27 .\points\templates\index.html:291
-#: .\points\templates\naive-questions.html:27
+#: .\points\templates\art-diving.html:28 .\points\templates\index.html:28
+#: .\points\templates\index.html:289 .\points\templates\naive-questions.html:28
 msgid "О лаборатории"
 msgstr "About the laboratory"
 
-#: .\points\templates\index.html:32 .\points\templates\index.html:294
-#: .\points\templates\naive-questions.html:32
+#: .\points\templates\art-diving.html:33 .\points\templates\index.html:33
+#: .\points\templates\index.html:292 .\points\templates\naive-questions.html:33
 msgid "Проекты"
 msgstr "Projects"
 
-#: .\points\templates\index.html:37 .\points\templates\index.html:297
-#: .\points\templates\naive-questions.html:37
+#: .\points\templates\art-diving.html:38 .\points\templates\index.html:38
+#: .\points\templates\index.html:295 .\points\templates\naive-questions.html:38
 msgid "Портфолио"
 msgstr "Portfolio"
 
-#: .\points\templates\index.html:42 .\points\templates\index.html:303
-#: .\points\templates\index.html:309 .\points\templates\naive-questions.html:42
+#: .\points\templates\art-diving.html:43 .\points\templates\index.html:43
+#: .\points\templates\index.html:301 .\points\templates\index.html:307
+#: .\points\templates\naive-questions.html:43
 msgid "Контакты"
 msgstr "Contacts"
 
-#: .\points\templates\index.html:102
-msgid "Новая"
-msgstr "New"
+#: .\points\templates\art-diving.html:103
+msgid "Арт-дайвинг. полное погружение"
+msgstr "Art diving. full immersion"
 
-#: .\points\templates\index.html:102
-msgid "точка зрения"
-msgstr "point of view"
+#: .\points\templates\art-diving.html:106
+msgid "Прочувствуй художественное произведение"
+msgstr "Experience the work of art"
 
-#: .\points\templates\index.html:103
-msgid "на искусство"
-msgstr "on art"
-
-#: .\points\templates\index.html:106
-msgid "Арт-лаборатория, открывающая искусство по-новому"
-msgstr "An art laboratory that discovers art in a new way"
-
-#: .\points\templates\index.html:113
-#: .\points\templates\naive-questions.html:112
+#: .\points\templates\art-diving.html:113 .\points\templates\index.html:114
+#: .\points\templates\naive-questions.html:113
 msgid "Подробнее"
 msgstr "More details"
 
-#: .\points\templates\index.html:121
+#: .\points\templates\art-diving.html:121
+#: .\points\templates\naive-questions.html:121
+msgid "о проекте"
+msgstr "about the project"
+
+#: .\points\templates\index.html:9
+msgid "Точки зрения"
+msgstr "point of view"
+
+#: .\points\templates\index.html:103
+msgid "Новая"
+msgstr "New"
+
+#: .\points\templates\index.html:103
+msgid "точка зрения"
+msgstr "point of view"
+
+#: .\points\templates\index.html:104
+msgid "на искусство"
+msgstr "on art"
+
+#: .\points\templates\index.html:107
+msgid "Арт-лаборатория, открывающая искусство по-новому"
+msgstr "An art laboratory that discovers art in a new way"
+
+#: .\points\templates\index.html:122
 msgid "о лаборатории"
 msgstr "About the laboratory"
 
-#: .\points\templates\index.html:125
+#: .\points\templates\index.html:126
 msgid "Арт-лаборатория «Точки зрения» объединяет творческих людей в совместной"
 msgstr "The art laboratory “Points of View” brings together creative people"
 
-#: .\points\templates\index.html:126
+#: .\points\templates\index.html:127
 msgid "прикладной реализации их талантов"
 msgstr "in the jointapplication of their talents"
 
-#: .\points\templates\index.html:129
+#: .\points\templates\index.html:130
 msgid "Мы создаём удивительные вещи с помощью музыки, слова и графики сближаем"
 msgstr "We create amazing things with the help of music, words and graphics,"
 
-#: .\points\templates\index.html:130
+#: .\points\templates\index.html:131
 msgid "зрителей и произведения художников"
 msgstr "bringing viewers and the works of artists"
 
-#: .\points\templates\index.html:134
+#: .\points\templates\index.html:135
 msgid "3 ярких направления нашего творчества"
 msgstr "3 bright areas of our creativity"
 
-#: .\points\templates\index.html:135
+#: .\points\templates\index.html:136
 msgid "арт-дайвинг"
 msgstr "Art diving"
 
-#: .\points\templates\index.html:136
-#: .\points\templates\naive-questions.html:102
+#: .\points\templates\index.html:137
+#: .\points\templates\naive-questions.html:103
 msgid "наивные вопросы художнику"
 msgstr "naive questions to the artist"
 
-#: .\points\templates\index.html:137
+#: .\points\templates\index.html:138
 msgid "арт-картель"
 msgstr "art cartel"
 
-#: .\points\templates\index.html:143
+#: .\points\templates\index.html:144
 msgid "В лаборатории"
 msgstr "In the laboratory"
 
-#: .\points\templates\index.html:149
+#: .\points\templates\index.html:150
 msgid "Т"
 msgstr "P"
 
-#: .\points\templates\index.html:155
+#: .\points\templates\index.html:156
 msgid "чки зрения” каждый участник художе"
 msgstr "ints of view” each parti"
 
-#: .\points\templates\index.html:163
+#: .\points\templates\index.html:164
 msgid "твенного"
 msgstr "ipant in an art"
 
-#: .\points\templates\index.html:170
+#: .\points\templates\index.html:171
 msgid "пр"
 msgstr "pr"
 
-#: .\points\templates\index.html:178
+#: .\points\templates\index.html:179
 msgid "екта - автор"
 msgstr "ject is an author"
 
-#: .\points\templates\index.html:181
+#: .\points\templates\index.html:182
 msgid ""
 "В то же время авторство теряется и приумаляется в угоду большего - нового,"
 msgstr ""
 "At the same time, authorship is lost and diminished in favor of something "
 "greater -"
 
-#: .\points\templates\index.html:182
+#: .\points\templates\index.html:183
 msgid "рожденного синтезом общих вложений. Творчество «для другого»"
 msgstr ""
 " new, born from the synthesis of common investments. Creativity «for another»"
 
-#: .\points\templates\index.html:189
+#: .\points\templates\index.html:190
 msgid "проекты"
 msgstr "Projects"
 
-#: .\points\templates\index.html:194
-msgid "Арт-дайвинг"
-msgstr "Art diving"
-
-#: .\points\templates\index.html:197
-msgid "Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи"
-msgstr ""
-"Art diving is an audio session of immersing yourself in a painting within "
-"the walls of a gallery"
-
-#: .\points\templates\index.html:198
-msgid "Зритель подходит к картине, наводит свой смартфон на QR код рядом"
-msgstr ""
-"The viewer approaches the painting, points his smartphone at the QR code "
-"next to"
-
-#: .\points\templates\index.html:199
-msgid "с картиной, надевает наушники и запускает сеанс медиации"
-msgstr "the painting, puts on headphones and starts a mediation session"
-
-#: .\points\templates\index.html:213 .\points\templates\naive-questions.html:8
-msgid "Наивные вопросы художнику"
-msgstr "Naive questions for the artist"
-
-#: .\points\templates\index.html:216
-#: .\points\templates\naive-questions.html:126
-msgid "Наивные вопросы художнику - это видеоинтервью, на которых художник"
-msgstr ""
-"Naive questions for the artist are video interviews in which the artist"
-
-#: .\points\templates\index.html:217
-#: .\points\templates\naive-questions.html:127
-msgid "раскрывается с человеческого ракурса"
-msgstr "reveals himself from a human perspective"
-
-#: .\points\templates\index.html:231
+#: .\points\templates\index.html:229
 msgid "Арт-картель"
 msgstr "Art cartel"
 
-#: .\points\templates\index.html:234
+#: .\points\templates\index.html:232
 msgid "Арт-картель это форма совместного изучения интересующего, без учителя и"
 msgstr ""
 "Art cartel is a form of joint study of something of interest, without a "
 "teacher"
 
-#: .\points\templates\index.html:235
+#: .\points\templates\index.html:233
 msgid "господствующей точки зрения"
 msgstr "or a dominant pointteacher"
 
-#: .\points\templates\index.html:238
+#: .\points\templates\index.html:236
 msgid ""
 "В формате малой группы 8-10 человек мы самостоятельно изучаем материал и"
 msgstr ""
 "In a small group format of 8-10 people, we independently study the material"
 
-#: .\points\templates\index.html:239
+#: .\points\templates\index.html:237
 msgid "обсуждаем его на онлайн-встречах"
 msgstr "and discuss it in online meetings"
 
-#: .\points\templates\index.html:258 .\points\templates\index.html:300
+#: .\points\templates\index.html:256 .\points\templates\index.html:298
 msgid "Команда"
 msgstr "Team"
 
-#: .\points\templates\naive-questions.html:105
+#: .\points\templates\naive-questions.html:9
+msgid "Наивные вопросы художнику"
+msgstr "Naive questions for the artist"
+
+#: .\points\templates\naive-questions.html:106
 msgid "Человеку интересен человек"
 msgstr "A person is interested in a person"
-
-#: .\points\templates\naive-questions.html:120
-msgid "о проекте"
-msgstr "about the project"
-
-#: .\points\templates\naive-questions.html:130
-msgid ""
-"Человеку интересен не художник, а именно человек: с человеческой судьбой"
-msgstr "A person is interested not in an artist, but in a person: with human destiny"
-
-#: .\points\templates\naive-questions.html:131
-msgid "понятными радостями и сложностями. Интересен контекст, в котором"
-msgstr "understandable joys and difficulties. The context in which the works were created,"
-
-#: .\points\templates\naive-questions.html:132
-msgid "создавались произведения, условия и обстоятельства сформировавшие"
-msgstr "the conditions and circumstances that shaped"
-
-#: .\points\templates\naive-questions.html:133
-msgid "мировоззрение артиста"
-msgstr "the artist’s worldview are interesting"
-
-#: .\points\templates\naive-questions.html:136
-msgid "Проект “Наивные вопросы художнику” показывает и рассказывает о том"
-msgstr "The project “Naive Questions for the Artist” shows and talks about what"
-
-#: .\points\templates\naive-questions.html:137
-msgid "что предшествует рождению произведений - об извилистых тропах жизни"
-msgstr "precedes the birth of works - about the winding paths"
-
-#: .\points\templates\naive-questions.html:138
-msgid "художника. Зритель слышит голос художника, видит его мимику и жесту"
-msgstr "of an artist’s life. The viewer hears the artist’s voice, sees his facial expressions and gestures"
-
-#: .\points\templates\naive-questions.html:139
-msgid "узнаёт его мировозрение и оказывается способен посмотреть глазами"
-msgstr "recognizes his worldview and is able to look through the artist’s"
-
-#: .\points\templates\naive-questions.html:140
-msgid "художника на его произведение, прочувствовать замысел"
-msgstr "eyes at his work, feel the idea"
-
-#: .\points\templates\naive-questions.html:150
-msgid ""
-"Проект “наивные вопросы” открывает зрителю возможность настроить себя на"
-msgstr "“The project “naive questions” gives the viewer the opportunity to attune themselves"
-
-#: .\points\templates\naive-questions.html:151
-msgid ""
-"восприятие работ художника и задуматься над самой масштабной и противоречивой"
-msgstr "to the perception of the artist’s works and think about the most ambitious and controversial"
-
-#: .\points\templates\naive-questions.html:152
-msgid "работой - над картиной мира художника"
-msgstr "work - the artist’s picture of the world"
-
-#: .\points\templates\naive-questions.html:155
-msgid "Сквозь “наивные вопросы” художник становится ближе зрителю. Зрителю не"
-msgstr "Through “naive questions” the artist becomes closer to the viewer. The viewer is not"
-
-#: .\points\templates\naive-questions.html:156
-msgid ""
-"предлагается интерпретация или способ понимания произведения художника. "
-"Зритель"
-msgstr "offered an interpretation or a way to understand the artist's work. The viewer"
-
-#: .\points\templates\naive-questions.html:157
-msgid ""
-"знакомится с жизнью художника самостоятельно выделяя слагаемые образовавшие "
-"целое"
-msgstr "gets acquainted with the life of the artist by independently highlighting the terms that formed"
-
-#: .\points\templates\naive-questions.html:158
-msgid "- художника и его произведения"
-msgstr "- the artist and his works"
-
-#: .\points\templates\naive-questions.html:166
-msgid "что мы умеем?"
-msgstr "what can we do?"
-
-#: .\points\templates\naive-questions.html:171
-msgid "Раскрыть художника"
-msgstr "Reveal artist"
-
-#: .\points\templates\naive-questions.html:174
-msgid "Решаем проблему конфликта с художником: художник человек, контекст его"
-msgstr "We solve the problem of conflict with the artist: the artist is a person, the context of his"
-
-#: .\points\templates\naive-questions.html:175
-msgid "биографии это предтеча им создаваемого"
-msgstr "biography is the forerunner of what he creates"
-
-#: .\points\templates\naive-questions.html:180
-msgid "Передать визуально"
-msgstr "Convey visually"
-
-#: .\points\templates\naive-questions.html:183
-msgid "У нас видеотворчество - используем и снятый на камеру материал, и"
-msgstr "We have video creativity - we use both material shot on camera and"
-
-#: .\points\templates\naive-questions.html:184
-msgid "эксперменты AI, так, чтобы выглядело под стать художнику"
-msgstr "AI experiments, so that it looks like an artist"
-
-#: .\points\templates\naive-questions.html:189
-msgid "Оформить"
-msgstr "Design"
-
-#: .\points\templates\naive-questions.html:192
-msgid ""
-"Художник должен быть найден и по смежным запросам. Осуществляется дубляж"
-msgstr "The artist must also be found for related queries. Dubbing"
-
-#: .\points\templates\naive-questions.html:193
-msgid "на английском языке"
-msgstr "in English is carried out"
-
-#: .\points\templates\naive-questions.html:203
-msgid "реализация"
-msgstr "implementation"
-
-#: .\points\templates\naive-questions.html:212
-msgid "японская художница"
-msgstr "Japanese artist"
-
-#: .\points\templates\naive-questions.html:218
-msgid "Айк Адамян"
-msgstr "Hayk Adamyan"
-
-#: .\points\templates\naive-questions.html:221
-msgid "фотограф"
-msgstr "photographer"
-
-#: .\points\templates\naive-questions.html:227
-msgid "Алексей Манукян"
-msgstr "Alexey Manukyan"
-
-#: .\points\templates\naive-questions.html:230
-msgid "художник"
-msgstr "artist"

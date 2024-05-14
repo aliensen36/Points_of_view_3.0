@@ -196,9 +196,6 @@
                         </h4>
                         <p class="project-card-description">
                             {{ diving_data.description }}
-                            <!--                            {% translate 'Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи' %}.-->
-<!--                            {% translate 'Зритель подходит к картине, наводит свой смартфон на QR код рядом' %}-->
-<!--                            {% translate 'с картиной, надевает наушники и запускает сеанс медиации' %}.-->
                         </p>
                         <a href="{% url 'art-diving' %}" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
@@ -212,11 +209,10 @@
                     </div>
                     <div class="project-card project-card--2">
                         <h4 class="project-card-subtitle">
-                            {% translate 'Наивные вопросы художнику' %}
+                            {{ nq_data.name }}
                         </h4>
                         <p class="project-card-description">
-                            {% translate 'Наивные вопросы художнику - это видеоинтервью, на которых художник' %}
-                            {% translate 'раскрывается с человеческого ракурса' %}.
+                            {{ nq_data.description }}
                         </p>
                         <a href="{% url 'naive-questions' %}" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"

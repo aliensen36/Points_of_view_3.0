@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Арт-дайвинг</title>
+    <title>{% translate 'Арт-дайвинг' %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
@@ -24,22 +25,22 @@
                 <ul class="header-nav-list">
                     <li class="header-nav-item">
                         <a href="{% url 'index' %}" class="header-nav-link">
-                            О лаборатории
+                            {% translate 'О лаборатории' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="{% url 'index' %}#projects" class="header-nav-link">
-                            Проекты
+                            {% translate 'Проекты' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="{% url 'portfolio' %}" class="header-nav-link">
-                            Портфолио
+                            {% translate 'Портфолио' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="{% url 'contacts' %}" class="header-nav-link">
-                            Контакты
+                            {% translate 'Контакты' %}
                         </a>
                     </li>
                 </ul>
@@ -99,17 +100,17 @@
         <section class="hero container">
             <div class="hero-container">
                 <h1 class="hero-title">
-                    Арт-дайвинг. полное погружение
+                    {% translate 'Арт-дайвинг. полное погружение' %}
                 </h1>
                 <p class="hero-text">
-                    Прочувствуй художественное произведение
+                    {% translate 'Прочувствуй художественное произведение' %}.
                 </p>
                 <button class="hero-btn" onclick="window.scrollTo({
                     top: 720,
                     left: 0,
                     behavior: 'smooth'
                     })">
-                    Подробнее
+                    {% translate 'Подробнее' %}
                 </button>
             </div>
         </section>
@@ -117,12 +118,12 @@
         <section class="about-project">
             <div class="container about-project-container">
                 <h2 class="subtitle about-project-subtitle">
-                    о проекте
+                    {% translate 'о проекте' %}
                 </h2>
                 <div class="about-project-inner-container">
                     <div class="about-project-left">
                         <div class="about-project-left-card">
-                            зритель подходит к картине
+                            {{ about_b1 }}
                         </div>
                         <div class="about-project-left-arrow">
                             <svg width="24" height="68" viewBox="0 0 24 68" fill="none"
@@ -132,7 +133,7 @@
                             </svg>
                         </div>
                         <div class="about-project-left-card">
-                            наводит свой смартфон на QR код рядом с картиной
+                            {{ about_b2 }}
                         </div>
                         <div class="about-project-left-arrow">
                             <svg width="24" height="68" viewBox="0 0 24 68" fill="none"
@@ -142,25 +143,21 @@
                             </svg>
                         </div>
                         <div class="about-project-left-card">
-                            надевает наушники и запускает сеанс медиации
+                            {{ about_b3 }}
                         </div>
                     </div>
                     <div class="about-project-right">
                         <h3 class="about-project-right-subtitle">
-                            Арт-дайвинг это аудио-сеансы погружения в картину в стенах галереи.
+                            {{ about_title }}
                         </h3>
                         <p class="about-project-right-descr">
-                            Музыка проступает в качестве камертона настраивая зрителя на неспешное созерцание.<br>
-                            Голос обращает его внимание на детали произведения.
+                            {{ about_1 }}
                         </p>
                         <p class="about-project-right-descr">
-                            В ходе арт-медиации преображается восприятие произведения.Смещаясь от беглых оценок
-                            “красиво/некрасиво”, “нравится/не нравится” к вопросам “что я чувствую и о чём я думаю
-                            созерцая произведение”?
+                            {{ about_2 }}
                         </p>
                         <p class="about-project-right-descr">
-                            По окончанию сеанса зрителю предлагается поделиться возникшим художественным впечатление с
-                            помощью интегрированного сервиса отправки текстовых или голосовых сообщений.
+                            {{ about_3 }}
                         </p>
                     </div>
                 </div>
@@ -170,34 +167,29 @@
         <section class="about-project-2">
             <div class="container about-project-2-container">
                 <h3 class="about-project-2-subtitle">
-                    Арт-дайвинг - это сеанс погружения и эмоционального сближения с объектом искусства.
+                    {{ details_title }}
                 </h3>
                 <div class="about-project-2-inner-container">
                     <div class="about-project-2-left">
                         <p class="about-project-2-left-text">
-                            Не секрет, что организация галерейно-выставочного пространства не всегда способна обеспечить
-                            самое главное: возможность уединиться с произведением.
+                            {{ details_1 }}
                         </p>
                         <p class="about-project-2-left-text">
-                            С другой стороны и зритель скромен. Задерживать внимание напротив картины даже на 10 минут
-                            до сих пор не является привычным и распространенным способом посещения выставок.
+                            {{ details_2 }}
                         </p>
                         <p class="about-project-2-left-text">
-                            Однако сближение с произведением искусства требует времени. Подобно тому как написание
-                            картины длительный процесс в ходе которого количество наносимых слоев превышает порой сотню,
-                            пока не будет достигнут удовлетворяющий художника результат. Логично предположить, что и
-                            процесс восприятия мог бы устремляться к временной равнозначности процессу создания.
+                            {{ details_3 }}
                         </p>
                     </div>
                     <div class="about-project-2-right">
                         <p class="about-project-2-right-text">
-                            настраивает на неспешное созерцание произведения
+                            {{ details_b1 }}
                         </p>
                         <p class="about-project-2-right-text">
-                            провоцирует в зрителе вопрошание и его собственном художественном впечатление
+                            {{ details_b2 }}
                         </p>
                         <p class="about-project-2-right-text">
-                            возбуждает чувства и мыслительный ассоциативный ряд
+                            {{ details_b3 }}
                         </p>
                     </div>
                 </div>
@@ -207,41 +199,39 @@
         <section class="skills">
             <div class="container skills-container">
                 <h2 class="subtitle skills-subtitle">
-                    что мы умеем?
+                    {{ we_can }}
                 </h2>
                 <ul class="skills-list">
                     <li class="skills-item skills-item-1">
                         <h3 class="skills-list-subtitle">
-                            1. Провести арт-медиацию
+                            {{ we_can_1_title }}
                         </h3>
                         <p class="skills-list-descr">
-                            В ходе медиации делаем из каждого зрителя высокочувствительный “сенсор”, отражающий
-                            художественное впечатление от произведения
+                            {{ we_can_1 }}
                         </p>
                     </li>
                     <li class="skills-item skills-item-2">
                         <h3 class="skills-list-subtitle">
-                            2. Дополнить аудиально
+                            {{ we_can_2_title }}
                         </h3>
                         <p class="skills-list-descr">
-                            Можем написать музыкальное или звуковое сопровождение
+                            {{ we_can_2 }}
                         </p>
                     </li>
                     <li class="skills-item skills-item-3">
                         <h3 class="skills-list-subtitle">
-                            3. Перевести
+                            {{ we_can_3_title }}
                         </h3>
                         <p class="skills-list-descr">
-                            Можем сопроводить актёрский переводом на 3-х языках (русский, английский, французский)
+                            {{ we_can_3 }}
                         </p>
                     </li>
                     <li class="skills-item skills-item-4">
                         <h3 class="skills-list-subtitle">
-                            4. Преподнести
+                            {{ we_can_4_title }}
                         </h3>
                         <p class="skills-list-descr">
-                            Преподнести ментально, эмоционально, материально (произведение искусство может быть объектом
-                            вложений)
+                            {{ we_can_4 }}
                         </p>
                     </li>
                 </ul>
@@ -251,52 +241,52 @@
         <section class="realization">
             <div class="container realization-container">
                 <h2 class="subtitle realization-subtitle">
-                    реализация
+                    {{ impl_header }}
                 </h2>
                 <div class="realization-wrap">
                     <div class="realization-card">
                         <img src="{% static 'img/Gallery of the Aslamazyan Sisters.png' %}" alt="Gallery of the Aslamazyan Sisters">
                         <h3 class="relization-name">
-                            Cестры Асламазян
+                            {{ impl_title_1 }}
                         </h3>
                         <p class="realization-role">
-                            галереи сестер Асламазян
+                            {{ impl_ext_1 }}
                         </p>
                     </div>
                     <div class="realization-card">
                         <img src="{% static 'img/The exhibition of the photographer Dmitry Nesmelov.png' %}" alt="The exhibition of the photographer Dmitry Nesmelov">
                         <h3 class="relization-name">
-                            Дмитрий Несмелов
+                            {{ impl_title_2 }}
                         </h3>
                         <p class="realization-role">
-                            выставки документального фотографа «Россия нулевых: случайный кадр»
+                            {{ impl_ext_2 }}
                         </p>
                     </div>
                     <div class="realization-card">
                         <img src="{% static 'img/Sculpture of the Jevo brothers.png' %}" alt="Sculpture of the Jevo brothers">
                         <h3 class="relization-name">
-                            Братья Jevo
+                            {{ impl_title_3 }}
                         </h3>
                         <p class="realization-role">
-                            скульптуры «Елена»
+                            {{ impl_ext_3 }}
                         </p>
                     </div>
                     <div class="realization-card">
                         <img src="{% static 'img/The painting by Artyom Sargsyan.png' %}" alt="The painting by Artyom Sargsyan">
                         <h3 class="relization-name">
-                            Артем Саргисян
+                            {{ impl_title_4 }}
                         </h3>
                         <p class="realization-role">
-                            картины «100 лет воспоминаний»
+                            {{ impl_ext_4 }}
                         </p>
                     </div>
                     <div class="realization-card">
                         <img src="{% static 'img/Canvas by the artist Shirin Heidarinezhad.png' %}" alt="Canvas by the artist Shirin Heidarinezhad">
                         <h3 class="relization-name">
-                            Shirin Heidarinezhad
+                            {{ impl_title_5 }}
                         </h3>
                         <p class="realization-role">
-                            полотна иранской художницы «Отсутствующие основания»
+                            {{ impl_ext_5 }}
                         </p>
                     </div>
                 </div>

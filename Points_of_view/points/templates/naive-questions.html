@@ -124,21 +124,13 @@
                     <img src="{% static 'img/naive-question-about.png' %}" alt="video interview with the artist">
                     <div class="about-project-inner-wrapper">
                         <p class="about-project-descr-big">
-                            {% translate 'Наивные вопросы художнику - это видеоинтервью, на которых художник' %}
-                            {% translate 'раскрывается с человеческого ракурса' %}.
+                            {{ about_title }}
                         </p>
                         <p class="about-project-descr-small">
-                            {% translate 'Человеку интересен не художник, а именно человек: с человеческой судьбой' %},
-                            {% translate 'понятными радостями и сложностями. Интересен контекст, в котором' %}
-                            {% translate 'создавались произведения, условия и обстоятельства сформировавшие' %}
-                            {% translate 'мировоззрение артиста' %}.
+                            {{ about_1 }}
                         </p>
                         <p class="about-project-descr-small">
-                            {% translate 'Проект “Наивные вопросы художнику” показывает и рассказывает о том' %},
-                            {% translate 'что предшествует рождению произведений - об извилистых тропах жизни' %}
-                            {% translate 'художника. Зритель слышит голос художника, видит его мимику и жесту' %},
-                            {% translate 'узнаёт его мировозрение и оказывается способен посмотреть глазами' %}
-                            {% translate 'художника на его произведение, прочувствовать замысел' %}.
+                            {{ about_2 }}
                         </p>
                     </div>
                 </div>
@@ -148,15 +140,10 @@
         <section class="about-project-2">
             <div class="container about-project-2-container">
                 <p class="about-project-2-descr-big">
-                    {% translate 'Проект “наивные вопросы” открывает зрителю возможность настроить себя на' %}
-                    {% translate 'восприятие работ художника и задуматься над самой масштабной и противоречивой' %}
-                    {% translate 'работой - над картиной мира художника' %}
+                    {{ details_title }}
                 </p>
                 <p class="about-project-2-descr-small">
-                    {% translate 'Сквозь “наивные вопросы” художник становится ближе зрителю. Зрителю не' %}
-                    {% translate 'предлагается интерпретация или способ понимания произведения художника. Зритель' %}
-                    {% translate 'знакомится с жизнью художника самостоятельно выделяя слагаемые образовавшие целое' %}
-                    {% translate '- художника и его произведения' %}.
+                    {{ details_1 }}
                 </p>
             </div>
         </section>
@@ -164,34 +151,31 @@
         <section class="skills">
             <div class="container skills-container">
                 <h2 class="subtitle skills-subtitle">
-                    {% translate 'что мы умеем?' %}
+                    {{ we_can }}
                 </h2>
                 <ul class="skills-list">
                     <li class="skills-item skills-item-1">
                         <h3 class="skills-list-subtitle">
-                            1. {% translate 'Раскрыть художника' %}
+                            {{ we_can_1_title }}
                         </h3>
                         <p class="skills-list-descr">
-                            {% translate 'Решаем проблему конфликта с художником: художник человек, контекст его' %}
-                            {% translate 'биографии это предтеча им создаваемого' %}
+                            {{ we_can_1 }}
                         </p>
                     </li>
                     <li class="skills-item skills-item-2">
                         <h3 class="skills-list-subtitle">
-                            2. {% translate 'Передать визуально' %}
+                            {{ we_can_2_title }}
                         </h3>
                         <p class="skills-list-descr">
-                            {% translate 'У нас видеотворчество - используем и снятый на камеру материал, и' %}
-                            {% translate 'эксперменты AI, так, чтобы выглядело под стать художнику' %}
+                            {{ we_can_2 }}
                         </p>
                     </li>
                     <li class="skills-item skills-item-3">
                         <h3 class="skills-list-subtitle">
-                            3. {% translate 'Оформить' %}
+                            {{ we_can_3_title }}
                         </h3>
                         <p class="skills-list-descr">
-                            {% translate 'Художник должен быть найден и по смежным запросам. Осуществляется дубляж' %}
-                            {% translate 'на английском языке' %}
+                            {{ we_can_3 }}
                         </p>
                     </li>
                 </ul>
@@ -201,34 +185,34 @@
         <section class="realization">
             <div class="container realization-container">
                 <h2 class="subtitle realization-subtitle">
-                    {% translate 'реализация' %}
+                    {{ impl_header }}
                 </h2>
                 <div class="realization-wrap">
                     <div class="realization-card">
                         <img src="{% static 'img/Ayumi-Adachi.png' %}" alt="photo of Ayumi Adachi">
                         <h3 class="relization-name">
-                            Ayumi Adachi
+                            {{ impl_title_1 }}
                         </h3>
                         <p class="realization-role">
-                            {% translate 'японская художница' %}
+                            {{ impl_ext_1 }}
                         </p>
                     </div>
                     <div class="realization-card">
                         <img src="{% static 'img/Hayk-Adamyan.png' %}" alt="photo of Hayk Adamyan">
                         <h3 class="relization-name">
-                            {% translate 'Айк Адамян' %}
+                            {{ impl_title_2 }}
                         </h3>
                         <p class="realization-role">
-                            {% translate 'фотограф' %}
+                            {{ impl_ext_2 }}
                         </p>
                     </div>
                     <div class="realization-card">
                         <img src="{% static 'img/Alexey-Manukyan.png' %}" alt="photo of Alexey Manukyan">
                         <h3 class="relization-name">
-                            {% translate 'Алексей Манукян' %}
+                            {{ impl_title_3 }}
                         </h3>
                         <p class="realization-role">
-                            {% translate 'художник' %}
+                            {{ impl_ext_3 }}
                         </p>
                     </div>
                 </div>
