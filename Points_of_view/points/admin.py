@@ -18,15 +18,10 @@ class TeamAdmin(TranslationAdmin):
 admin.site.register(Team, TeamAdmin)
 
 
+class Art_divingAdmin(TranslationAdmin):
+    list_display = ('name',)
+    list_display_links = ('name',)
+    fields = ('name', 'description', 'about_title', 'about_1', 'about_2', 'about_3',
+              'details_title', 'details_1', 'details_2', 'details_3')
 
-class ProjectAdmin(TranslationAdmin):
-    list_display = ('preview', 'name', 'description')
-    list_display_links = ('preview', 'name', 'description')
-    search_fields = ('name', 'description',)
-    fields = ('name', 'photo', 'preview', 'description')
-    readonly_fields = ["preview"]
-
-    def preview(self, obj):
-        return mark_safe(f'<img src="{obj.photo.url}" style="max-width:100px; max-height:150px;">')
-
-admin.site.register(Project, ProjectAdmin)
+admin.site.register(Art_diving, Art_divingAdmin)

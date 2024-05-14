@@ -192,12 +192,13 @@
                 <div class="projects-cards-container">
                     <div class="project-card project-card--1">
                         <h4 class="project-card-subtitle">
-                            {% translate 'Арт-дайвинг' %}
+                            {{ diving_data.name }}
                         </h4>
                         <p class="project-card-description">
-                            {% translate 'Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи' %}.
-                            {% translate 'Зритель подходит к картине, наводит свой смартфон на QR код рядом' %}
-                            {% translate 'с картиной, надевает наушники и запускает сеанс медиации' %}.
+                            {{ diving_data.description }}
+                            <!--                            {% translate 'Арт-дайвинг - это аудио-сеансы погружения в картину в стенах галереи' %}.-->
+<!--                            {% translate 'Зритель подходит к картине, наводит свой смартфон на QR код рядом' %}-->
+<!--                            {% translate 'с картиной, надевает наушники и запускает сеанс медиации' %}.-->
                         </p>
                         <a href="{% url 'art-diving' %}" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"

@@ -5,8 +5,14 @@ from .serializers import TeamSerializer
 
 
 def index(request):
-    teams = Team.objects.all()
-    return render(request, 'index.html', {'teams': teams})
+    diving = Art_diving.objects.get()
+    diving_data = {
+        'diving_data': {
+            'name': diving.name,
+            'description': diving.description,
+        }
+    }
+    return render(request, 'index.html', diving_data)
 
 def art_cartel(request):
     return render(request, 'art-cartel.html')
@@ -26,3 +32,8 @@ def portfolio(request):
 class TeamListAPIView(generics.ListAPIView):
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
+
+
+
+# teams = Team.objects.all()
+# {'teams': teams},
