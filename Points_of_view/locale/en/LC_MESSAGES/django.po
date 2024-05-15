@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-14 19:05+0300\n"
+"POT-Creation-Date: 2024-05-15 13:49+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,48 +26,72 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: .\points\templates\art-diving.html:9
-msgid "Арт-дайвинг"
-msgstr "Art diving"
+#: .\points\templates\art-cartel.html:9 .\points\templates\art-cartel.html:103
+msgid "Арт-картель"
+msgstr "Art cartel"
 
-#: .\points\templates\art-diving.html:28 .\points\templates\index.html:28
-#: .\points\templates\index.html:289 .\points\templates\naive-questions.html:28
+#: .\points\templates\art-cartel.html:28 .\points\templates\art-diving.html:28
+#: .\points\templates\contacts.html:28 .\points\templates\index.html:28
+#: .\points\templates\index.html:291 .\points\templates\naive-questions.html:28
+#: .\points\templates\portfolio.html:28
 msgid "О лаборатории"
 msgstr "About the laboratory"
 
-#: .\points\templates\art-diving.html:33 .\points\templates\index.html:33
-#: .\points\templates\index.html:292 .\points\templates\naive-questions.html:33
+#: .\points\templates\art-cartel.html:33 .\points\templates\art-diving.html:33
+#: .\points\templates\contacts.html:33 .\points\templates\index.html:33
+#: .\points\templates\index.html:294 .\points\templates\naive-questions.html:33
+#: .\points\templates\portfolio.html:33
 msgid "Проекты"
 msgstr "Projects"
 
-#: .\points\templates\art-diving.html:38 .\points\templates\index.html:38
-#: .\points\templates\index.html:295 .\points\templates\naive-questions.html:38
+#: .\points\templates\art-cartel.html:38 .\points\templates\art-diving.html:38
+#: .\points\templates\contacts.html:38 .\points\templates\index.html:38
+#: .\points\templates\index.html:297 .\points\templates\naive-questions.html:38
+#: .\points\templates\portfolio.html:9 .\points\templates\portfolio.html:38
 msgid "Портфолио"
 msgstr "Portfolio"
 
-#: .\points\templates\art-diving.html:43 .\points\templates\index.html:43
-#: .\points\templates\index.html:301 .\points\templates\index.html:307
-#: .\points\templates\naive-questions.html:43
+#: .\points\templates\art-cartel.html:43 .\points\templates\art-diving.html:43
+#: .\points\templates\contacts.html:9 .\points\templates\contacts.html:43
+#: .\points\templates\index.html:43 .\points\templates\index.html:303
+#: .\points\templates\index.html:309 .\points\templates\naive-questions.html:43
+#: .\points\templates\portfolio.html:43
 msgid "Контакты"
 msgstr "Contacts"
 
-#: .\points\templates\art-diving.html:103
-msgid "Арт-дайвинг. полное погружение"
-msgstr "Art diving. full immersion"
+#: .\points\templates\art-cartel.html:111
+msgid "Университеты не там где диктуют, но там где дискутируют"
+msgstr "Universities are not where they dictate, but where they discuss"
 
-#: .\points\templates\art-diving.html:106
-msgid "Прочувствуй художественное произведение"
-msgstr "Experience the work of art"
-
+#: .\points\templates\art-cartel.html:118
 #: .\points\templates\art-diving.html:113 .\points\templates\index.html:114
 #: .\points\templates\naive-questions.html:113
 msgid "Подробнее"
 msgstr "More details"
 
+#: .\points\templates\art-cartel.html:126
 #: .\points\templates\art-diving.html:121
 #: .\points\templates\naive-questions.html:121
 msgid "о проекте"
 msgstr "about the project"
+
+#: .\points\templates\art-diving.html:9
+msgid "Арт-дайвинг"
+msgstr "Art diving"
+
+#: .\points\templates\art-diving.html:103
+msgid "Арт-дайвинг. полное погружение"
+msgstr "Art diving.<br>Full immersion"
+
+#: .\points\templates\art-diving.html:106
+msgid "Прочувствуй художественное произведение"
+msgstr "Experience the work of art"
+
+#: .\points\templates\contacts.html:105
+msgid ""
+"Если у вас возникли вопросы или есть предложения о сотрудничестве - "
+"свяжитесь с нами"
+msgstr "If you have any questions or suggestions for cooperation,<br>contact us"
 
 #: .\points\templates\index.html:9
 msgid "Точки зрения"
@@ -166,31 +190,27 @@ msgstr ""
 msgid "проекты"
 msgstr "Projects"
 
-#: .\points\templates\index.html:229
-msgid "Арт-картель"
-msgstr "Art cartel"
-
-#: .\points\templates\index.html:232
+#: .\points\templates\index.html:233
 msgid "Арт-картель это форма совместного изучения интересующего, без учителя и"
 msgstr ""
 "Art cartel is a form of joint study of something of interest, without a "
 "teacher"
 
-#: .\points\templates\index.html:233
+#: .\points\templates\index.html:234
 msgid "господствующей точки зрения"
 msgstr "or a dominant pointteacher"
 
-#: .\points\templates\index.html:236
+#: .\points\templates\index.html:238
 msgid ""
 "В формате малой группы 8-10 человек мы самостоятельно изучаем материал и"
 msgstr ""
 "In a small group format of 8-10 people, we independently study the material"
 
-#: .\points\templates\index.html:237
+#: .\points\templates\index.html:239
 msgid "обсуждаем его на онлайн-встречах"
 msgstr "and discuss it in online meetings"
 
-#: .\points\templates\index.html:256 .\points\templates\index.html:298
+#: .\points\templates\index.html:258 .\points\templates\index.html:300
 msgid "Команда"
 msgstr "Team"
 
@@ -201,3 +221,7 @@ msgstr "Naive questions for the artist"
 #: .\points\templates\naive-questions.html:106
 msgid "Человеку интересен человек"
 msgstr "A person is interested in a person"
+
+#: .\points\templates\portfolio.html:102
+msgid "Страница находится в разработке"
+msgstr "Page is under construction"

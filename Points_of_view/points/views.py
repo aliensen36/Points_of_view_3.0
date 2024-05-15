@@ -19,11 +19,37 @@ def index(request):
             'description': nq.description,
         }
     }
-    context = {**diving_data, **nq_data}
+    cartel = Art_cartel.objects.get()
+    cartel_data = {
+        'cartel_data': {
+            'name': cartel.name,
+            'description_1': cartel.description_1,
+            'description_2': cartel.description_2,
+        }
+    }
+    context = {**diving_data, **nq_data, **cartel_data, 'cartel': cartel}
     return render(request, 'index.html', context)
 
 def art_cartel(request):
-    return render(request, 'art-cartel.html')
+    cartel = Art_cartel.objects.get()
+    cartel_data = {'name': cartel.name,
+                   'description_1': cartel.description_1,
+                   'description_2': cartel.description_2,
+                   'about_title': cartel.about_title,
+                   'about_1': cartel.about_1,
+                   'about_2': cartel.about_2,
+                   'details_title': cartel.details_title,
+                   'details_1': cartel.details_1,
+                   'details_2': cartel.details_2,
+                   'details_3': cartel.details_3,
+                   'details_4': cartel.details_4,
+                   'impl_header': cartel.impl_header,
+                   'impl_title': cartel.impl_title,
+                   'impl_1': cartel.impl_1,
+                   'impl_2': cartel.impl_2,
+                   'impl_3': cartel.impl_3
+                   }
+    return render(request, 'art-cartel.html', cartel_data)
 
 def art_diving(request):
     diving = Art_diving.objects.get()

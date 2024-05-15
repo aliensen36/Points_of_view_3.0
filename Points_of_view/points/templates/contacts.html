@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
+    <title>{% translate 'Контакты' %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
@@ -24,22 +25,22 @@
                 <ul class="header-nav-list">
                     <li class="header-nav-item">
                         <a href="{% url 'index' %}" class="header-nav-link">
-                            О лаборатории
+                            {% translate 'О лаборатории' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="{% url 'index' %}#projects" class="header-nav-link">
-                            Проекты
+                            {% translate 'Проекты' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="{% url 'portfolio' %}" class="header-nav-link">
-                            Портфолио
+                            {% translate 'Портфолио' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="{% url 'contacts' %}" class="header-nav-link">
-                            Контакты
+                            {% translate 'Контакты' %}
                         </a>
                     </li>
                 </ul>
@@ -101,7 +102,7 @@
                 andrey.gunyavin@gmail.com
             </p>
             <p class="contact-page-text">
-                Если у вас возникли вопросы или есть предложения о сотрудничестве свяжитесь с нами
+                {% translate 'Если у вас возникли вопросы или есть предложения о сотрудничестве - свяжитесь с нами' %}.
             </p>
         </div>
     </article>

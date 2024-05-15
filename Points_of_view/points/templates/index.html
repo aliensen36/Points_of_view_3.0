@@ -226,15 +226,17 @@
                     </div>
                     <div class="project-card project-card--3">
                         <h4 class="project-card-subtitle">
-                            {% translate 'Арт-картель' %}
+                            {{ cartel.name }}
                         </h4>
                         <p class="project-card-description">
-                            {% translate 'Арт-картель это форма совместного изучения интересующего, без учителя и' %}
-                            {% translate 'господствующей точки зрения' %}.
+                            {{ cartel.description_1 }}
+<!--                            {% translate 'Арт-картель это форма совместного изучения интересующего, без учителя и' %}-->
+<!--                            {% translate 'господствующей точки зрения' %}.-->
                         </p>
                         <p class="project-card-description">
-                            {% translate 'В формате малой группы 8-10 человек мы самостоятельно изучаем материал и' %}
-                            {% translate 'обсуждаем его на онлайн-встречах' %}.
+                            {{ cartel.description_2 }}
+<!--                            {% translate 'В формате малой группы 8-10 человек мы самостоятельно изучаем материал и' %}-->
+<!--                            {% translate 'обсуждаем его на онлайн-встречах' %}.-->
                         </p>
                         <a href="{% url 'art-cartel' %}" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
