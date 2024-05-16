@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Арт-картель</title>
+    <title>{% translate 'Арт-картель' %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
@@ -24,22 +25,22 @@
                 <ul class="header-nav-list">
                     <li class="header-nav-item">
                         <a href="{% url 'index' %}" class="header-nav-link">
-                            О лаборатории
+                            {% translate 'О лаборатории' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="{% url 'index' %}#projects" class="header-nav-link">
-                            Проекты
+                            {% translate 'Проекты' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="{% url 'portfolio' %}" class="header-nav-link">
-                            Портфолио
+                            {% translate 'Портфолио' %}
                         </a>
                     </li>
                     <li class="header-nav-item">
                         <a href="{% url 'contacts' %}" class="header-nav-link">
-                            Контакты
+                            {% translate 'Контакты' %}
                         </a>
                     </li>
                 </ul>
@@ -99,7 +100,7 @@
         <section class="hero container">
             <div class="hero-container">
                 <h1 class="hero-title">
-                    Арт-картель
+                    {% translate 'Арт-картель' %}
                 </h1>
                 <p class="hero-text">
                     Hey, teacher, leave these kids alone<br>
@@ -107,14 +108,14 @@
                     Pink Floyd
                 </p>
                 <p class="hero-text">
-                    Университеты не там где диктуют, но там где дискутируют.
+                    {% translate 'Университеты не там где диктуют, но там где дискутируют' %}.
                 </p>
                 <button class="hero-btn" onclick="window.scrollTo({
                     top: 660,
                     left: 0,
                     behavior: 'smooth'
                     })">
-                    Подробнее
+                    {% translate 'Подробнее' %}
                 </button>
             </div>
         </section>
@@ -122,25 +123,19 @@
         <section class="about-project container">
             <div class="about-project-container">
                 <h2 class="about-project-subtitle">
-                    о проекте
+                    {% translate 'о проекте' %}
                 </h2>
                 <div class="about-project-wrap">
-<!--                    <img src="../static/img/art-cartel.png" alt="photo of the art cartel meeting">-->
                     <img src="{% static 'img/art-cartel.png' %}" alt="photo of the art cartel meeting">
                     <div class="about-project-inner-wrap">
                         <p class="about-project-descr-big">
-                            Арт-картель это форма совместного изучения интересующего.<br>Без учителя и господствующей
-                            <br>точки
-                            зрения, Единственно <br>правильной.
+                            {{ about_title }}
                         </p>
                         <p class="about-project-descr-small">
-                            В формате малой группы 8-10 человек мы самостоятельно изучаем материал и обсуждаем его на
-                            онлайн встречах.
+                            {{ about_1 }}
                         </p>
                         <p class="about-project-descr-small">
-                            Мы вместе ищем информацию и много общаемся. Мы обнаруживаем совершенно разные точки зрения и
-                            подходы к пониманию. Мы дискутируем, иногда спорим, развивая новые ассоциативные связи,
-                            овладевая понятийным аппаратом и критическим мышлением.
+                            {{ about_2 }}
                         </p>
                     </div>
                 </div>
@@ -150,26 +145,31 @@
         <section class="about-project-2">
             <div class="container about-project-2-container">
                 <h2 class="about-project-2-subtitle">
-                    Ключевой манифест арт-картеля: главенство разных точек зрения
+                    {{ details_title }}
+                    <!--                    Ключевой манифест арт-картеля: главенство разных точек зрения-->
                 </h2>
                 <div class="about-project-2-wrap">
                     <div class="about-project-2-card">
-                        Арт картель это форма совместной работы над самообразование.<br>В малых группах по 8-10 человек
-                        “картелианцы” в формате дискуссий и бесед выстраивает программу интересующих тем.
+                        {{ details_1 }}
+<!--                        Арт картель это форма совместной работы над самообразование.<br>В малых группах по 8-10 человек-->
+<!--                        “картелианцы” в формате дискуссий и бесед выстраивает программу интересующих тем.-->
                     </div>
                     <div class="about-project-2-card">
-                        Участие в картеле подразумевает объемную работу по подготовке компактных докладов
-                        и их изложения, подготовке собственной речи. <br>Таким образом, удается защитить дискуссии от
-                        реактивных и аффективных высказываний.
+                        {{ details_2 }}
+<!--                        Участие в картеле подразумевает объемную работу по подготовке компактных докладов-->
+<!--                        и их изложения, подготовке собственной речи. <br>Таким образом, удается защитить дискуссии от-->
+<!--                        реактивных и аффективных высказываний.-->
                     </div>
                     <div class="about-project-2-card">
-                        В картеле главенствуют горизонтальные связи и отсутствует позиция сверху, того, кто знает лучше.
-                        Своя собственная точка зрения формируется в процессе освоения разного, зачастую противоположного
-                        и спорного.
+                        {{ details_3 }}
+<!--                        В картеле главенствуют горизонтальные связи и отсутствует позиция сверху, того, кто знает лучше.-->
+<!--                        Своя собственная точка зрения формируется в процессе освоения разного, зачастую противоположного-->
+<!--                        и спорного.-->
                     </div>
                     <div class="about-project-2-card">
-                        Работу картеля структурирует ведущий, планирующий равномерный порядок речей, выполняющий
-                        организовывающую и секретарские функции.
+                        {{ details_4 }}
+<!--                        Работу картеля структурирует ведущий, планирующий равномерный порядок речей, выполняющий-->
+<!--                        организовывающую и секретарские функции.-->
                     </div>
                 </div>
             </div>
@@ -178,21 +178,26 @@
         <section class="realization">
             <div class="container realization-container">
                 <h2 class="realization-subtitle">
-                    реализация
+                    {{ impl_header }}
+<!--                    реализация-->
                 </h2>
                 <div class="realization-wrap">
                     <p class="realization-text">
-                        В процессе подготовки 3 картеля на следующие темы:
+                        {{ impl_title }}
+<!--                        В процессе подготовки 3 картеля на следующие темы:-->
                     </p>
                     <ul class="realization-list">
                         <li class="realization-item">
-                            как понять современное искусство: исследование культурно-исторического контекста его зарождения
+                            {{ impl_1 }}
+<!--                            как понять современное искусство: исследование культурно-исторического контекста его зарождения-->
                         </li>
                         <li class="realization-item">
-                            как слушать музыку?
+                            {{ impl_2 }}
+<!--                            как слушать музыку?-->
                         </li>
                         <li class="realization-item">
-                            английский для творческих профессий: дизайнеров, художников, кураторов
+                            {{ impl_3 }}
+<!--                            английский для творческих профессий: дизайнеров, художников, кураторов-->
                         </li>
                     </ul>
                 </div>

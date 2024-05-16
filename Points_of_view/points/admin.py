@@ -45,3 +45,14 @@ class Naive_questionsAdmin(TranslationAdmin):
               'impl_title_3', 'impl_ext_3')
 
 admin.site.register(Naive_questions, Naive_questionsAdmin)
+
+
+class Art_cartelAdmin(TranslationAdmin):
+    list_display = ('name',)
+    list_display_links = ('name',)
+    fields = ('name', 'description_1', 'description_2',
+              'about_title', 'about_1', 'about_2',
+              'details_title', 'details_1', 'details_2', 'details_3', 'details_4',
+              'impl_header', 'impl_title', 'impl_1', 'impl_2', 'impl_3')
+
+admin.site.register(Art_cartel, Art_cartelAdmin)

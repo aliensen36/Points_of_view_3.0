@@ -90,3 +90,29 @@ class Naive_questions(models.Model):
     class Meta:
         verbose_name_plural = 'Наивные вопросы'
         verbose_name = 'Наивные вопросы'
+
+
+class Art_cartel(models.Model):
+    name = models.CharField(max_length=200, verbose_name='Название')
+    description_1 = models.TextField(verbose_name='Описание1')
+    description_2 = models.TextField(verbose_name='Описание2')
+    about_title = models.TextField(verbose_name='О проекте(заголовок)')
+    about_1 = models.TextField(verbose_name='О проекте(абз. 1)')
+    about_2 = models.TextField(verbose_name='О проекте(абз. 2)')
+    details_title = models.TextField(verbose_name='Детали(заголовок)')
+    details_1 = models.TextField(verbose_name='Детали(абз. 1)')
+    details_2 = models.TextField(verbose_name='Детали(абз. 2)')
+    details_3 = models.TextField(verbose_name='Детали(абз. 3)')
+    details_4 = models.TextField(verbose_name='Детали(абз. 4)')
+    impl_header = models.TextField(verbose_name='Реализация')
+    impl_title = models.TextField(verbose_name='Объявление')
+    impl_1 = models.TextField(verbose_name='Реализация(бл.1)')
+    impl_2 = models.TextField(verbose_name='Реализация(бл.2)')
+    impl_3 = models.TextField(verbose_name='Реализация(бл.3)')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Арт-картель'
+        verbose_name = 'Арт-картель'
