@@ -1,9 +1,8 @@
-fetch('http://127.0.0.1:8000/api/team/')
+fetch('/api/team/')
     .then(response => response.json())
     .then(data => {
         team = data;
         initSlider();
-        console.log(team);
     })
     .catch(error => console.error('Error:', error));
 

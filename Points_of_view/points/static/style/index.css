@@ -73,7 +73,7 @@ body {
 
 .header-container {
     display: flex;
-    padding: 30px 70px;
+    padding: 30px 55px;
     align-items: center;
     height: 130px;
 }
@@ -85,7 +85,7 @@ body {
 
 .header-nav-list {
     display: flex;
-    gap: 95px;
+    gap: 80px;
 }
 
 .header-nav-link {
@@ -103,6 +103,79 @@ body {
 .header-nav-link:active {
     color: #136856;
 }
+
+.language-form {
+    margin-right: 74px;
+    position: relative;
+    display: inline-flex;
+    gap: 2px;
+    border: 1px solid #BFBFBF;
+    border-radius: 15px;
+    width: 48px;
+    height: 26px;
+}
+
+.language-form,
+.language-label,
+.language-label-radio {
+    cursor: pointer;
+}
+
+.language-label {
+    position: relative;
+}
+
+.language-label-text {
+    position: absolute;
+    top: -12px;
+    left: 4px;
+    font-size: 8px;
+    color: #BFBFBF;
+    transition: color 0.3s ease;
+}
+
+.language-label.selected .language-label-text {
+    color: var(--black);
+}
+
+.language-label-radio {
+    opacity: 0; 
+    width: 22px;
+    height: 22px;
+    position: relative;
+    top: 1px;
+}
+
+.language-label-text::after {
+    content: '';
+    background-color: var(--green);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 13px;
+    left: -4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* z-index: 2; */
+}
+
+.language-label.selected .language-label-text::after {
+    opacity: 1;
+}
+
+/* .language-label-radio.checked::after {
+    content: '';
+    background-color: var(--green);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; 
+    z-index: 2;
+} */
 
 .contacts {
     display: flex;

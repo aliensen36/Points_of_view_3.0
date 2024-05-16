@@ -45,18 +45,18 @@
                     </li>
                 </ul>
             </nav>
-            <form action="{% url 'set_language' %}" method="post">
+            <form id="language-form" action="{% url 'set_language' %}" method="post" class="language-form">
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ redirect_to }}">
-                <label>
-                    <input type="radio" name="language" value="ru" {% if LANGUAGE_CODE == 'ru' %}checked{% endif %}>
-                    Русский
-                </label><br>
-                <label>
-                    <input type="radio" name="language" value="en" {% if LANGUAGE_CODE == 'en' %}checked{% endif %}>
-                    English
-                </label><br>
-                <button type="submit">Выбрать</button>
+                <label class="language-label">
+                    <span class="language-label-text">RU</span>
+                    <input class="language-label-radio" type="radio" name="language" value="ru" {% if LANGUAGE_CODE == 'ru' %}checked{% endif %}>
+                </label>
+                <label class="language-label">
+                    <span class="language-label-text">EN</span>
+                    <input class="language-label-radio" type="radio" name="language" value="en" {% if LANGUAGE_CODE == 'en' %}checked{% endif %}>
+                </label>
+                <!-- <button type="submit">Выбрать</button> -->
             </form>
             <ul class="contacts">
                 <li class="contacts-item">
@@ -357,6 +357,7 @@
         </div>
     </footer>
 
+    <script src="{% static 'scripts/switch.js' %}"></script>
     <script src="{% static 'scripts/index.js' %}"></script>
 </body>
 
