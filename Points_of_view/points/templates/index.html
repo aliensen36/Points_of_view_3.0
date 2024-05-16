@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
-<html lang="ru">
+<html lang="{{ language }}">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,11 @@
     <header class="header container">
         <div class="header-container">
             <div class="header-logo">
-                <img src="{% static 'img/logo-1.svg' %}" alt="logo">
+                {% if language == 'en' %}
+                    <img src="{% static 'img/logo-1-en.svg' %}" alt="logo">
+                {% else %}
+                    <img src="{% static 'img/logo-1.svg' %}" alt="logo">
+                {% endif %}
             </div>
             <nav class="header-nav">
                 <ul class="header-nav-list">
@@ -229,13 +233,9 @@
                         </h4>
                         <p class="project-card-description">
                             {{ cartel.description_1 }}
-<!--                            {% translate 'Арт-картель это форма совместного изучения интересующего, без учителя и' %}-->
-<!--                            {% translate 'господствующей точки зрения' %}.-->
                         </p>
                         <p class="project-card-description">
                             {{ cartel.description_2 }}
-<!--                            {% translate 'В формате малой группы 8-10 человек мы самостоятельно изучаем материал и' %}-->
-<!--                            {% translate 'обсуждаем его на онлайн-встречах' %}.-->
                         </p>
                         <a href="{% url 'art-cartel' %}" class="project-card-link">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
@@ -283,7 +283,11 @@
 
     <footer class="footer container">
         <div class="footer-container">
-            <img src="{% static 'img/logo-2.svg' %}" alt="logo" class="footer-logo">
+            {% if language == 'en' %}
+                <img src="{% static 'img/logo-2-en.svg' %}" alt="logo" class="footer-logo">
+            {% else %}
+                <img src="{% static 'img/logo-2.svg' %}" alt="logo" class="footer-logo">
+            {% endif %}
             <nav class="footer-nav">
                 <ul class="footer-nav-list">
                     <li class="footer-nav-item">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
-<html lang="ru">
+<html lang="{{ language }}">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,11 @@
     <header class="header container">
         <div class="header-container">
             <div class="header-logo">
-                <img src="{% static 'img/logo-1.svg' %}" alt="logo">
+                {% if language == 'en' %}
+                    <img src="{% static 'img/logo-1-en.svg' %}" alt="logo">
+                {% else %}
+                    <img src="{% static 'img/logo-1.svg' %}" alt="logo">
+                {% endif %}
             </div>
             <nav class="header-nav">
                 <ul class="header-nav-list">
@@ -145,30 +149,19 @@
             <div class="container about-project-2-container">
                 <h2 class="about-project-2-subtitle">
                     {{ details_title }}
-                    <!--                    Ключевой манифест арт-картеля: главенство разных точек зрения-->
                 </h2>
                 <div class="about-project-2-wrap">
                     <div class="about-project-2-card">
                         {{ details_1 }}
-<!--                        Арт картель это форма совместной работы над самообразование.<br>В малых группах по 8-10 человек-->
-<!--                        “картелианцы” в формате дискуссий и бесед выстраивает программу интересующих тем.-->
                     </div>
                     <div class="about-project-2-card">
                         {{ details_2 }}
-<!--                        Участие в картеле подразумевает объемную работу по подготовке компактных докладов-->
-<!--                        и их изложения, подготовке собственной речи. <br>Таким образом, удается защитить дискуссии от-->
-<!--                        реактивных и аффективных высказываний.-->
                     </div>
                     <div class="about-project-2-card">
                         {{ details_3 }}
-<!--                        В картеле главенствуют горизонтальные связи и отсутствует позиция сверху, того, кто знает лучше.-->
-<!--                        Своя собственная точка зрения формируется в процессе освоения разного, зачастую противоположного-->
-<!--                        и спорного.-->
                     </div>
                     <div class="about-project-2-card">
                         {{ details_4 }}
-<!--                        Работу картеля структурирует ведущий, планирующий равномерный порядок речей, выполняющий-->
-<!--                        организовывающую и секретарские функции.-->
                     </div>
                 </div>
             </div>
@@ -178,25 +171,20 @@
             <div class="container realization-container">
                 <h2 class="realization-subtitle">
                     {{ impl_header }}
-<!--                    реализация-->
                 </h2>
                 <div class="realization-wrap">
                     <p class="realization-text">
                         {{ impl_title }}
-<!--                        В процессе подготовки 3 картеля на следующие темы:-->
                     </p>
                     <ul class="realization-list">
                         <li class="realization-item">
                             {{ impl_1 }}
-<!--                            как понять современное искусство: исследование культурно-исторического контекста его зарождения-->
                         </li>
                         <li class="realization-item">
                             {{ impl_2 }}
-<!--                            как слушать музыку?-->
                         </li>
                         <li class="realization-item">
                             {{ impl_3 }}
-<!--                            английский для творческих профессий: дизайнеров, художников, кураторов-->
                         </li>
                     </ul>
                 </div>

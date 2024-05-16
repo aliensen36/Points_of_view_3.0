@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from rest_framework import generics
+from django.utils.translation import gettext as _
 from .serializers import TeamSerializer
 
 
@@ -27,7 +28,9 @@ def index(request):
             'description_2': cartel.description_2,
         }
     }
-    context = {**diving_data, **nq_data, **cartel_data, 'cartel': cartel}
+    language = _(request.LANGUAGE_CODE)
+    context = {**diving_data, **nq_data, **cartel_data, 'cartel': cartel,
+               'language': language}
     return render(request, 'index.html', context)
 
 def art_cartel(request):
@@ -49,6 +52,8 @@ def art_cartel(request):
                    'impl_2': cartel.impl_2,
                    'impl_3': cartel.impl_3
                    }
+    language = _(request.LANGUAGE_CODE)
+    cartel_data['language'] = language
     return render(request, 'art-cartel.html', cartel_data)
 
 def art_diving(request):
@@ -88,12 +93,9 @@ def art_diving(request):
                    'impl_title_5': diving.impl_title_5,
                    'impl_ext_5': diving.impl_ext_5
                    }
-
+    language = _(request.LANGUAGE_CODE)
+    diving_data['language'] = language
     return render(request, 'art-diving.html', diving_data)
-
-
-def contacts(request):
-    return render(request, 'contacts.html')
 
 def naive_questions(request):
     nq = Naive_questions.objects.get()
@@ -119,16 +121,23 @@ def naive_questions(request):
                'impl_title_3': nq.impl_title_3,
                'impl_ext_3': nq.impl_ext_3
                }
+    language = _(request.LANGUAGE_CODE)
+    nq_data['language'] = language
     return render(request, 'naive-questions.html', nq_data)
 
+
 def portfolio(request):
-    return render(request, 'portfolio.html')
+    language = _(request.LANGUAGE_CODE)
+    context = {'language': language}
+    return render(request, 'portfolio.html', context)
+
+
+def contacts(request):
+    language = _(request.LANGUAGE_CODE)
+    context = {'language': language}
+    return render(request, 'contacts.html', context)
+
 
 class TeamListAPIView(generics.ListAPIView):
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
-
-
-
-# teams = Team.objects.all()
-# {'teams': teams},
