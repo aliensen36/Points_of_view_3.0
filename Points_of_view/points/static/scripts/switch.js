@@ -40,6 +40,14 @@ languageRadios.forEach((radio, index) => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.header-nav-list');
 
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('header-nav-active');
+        burger.classList.toggle('toggle');
+    });
+});
 
 

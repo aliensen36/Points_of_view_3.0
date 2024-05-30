@@ -57,13 +57,6 @@ body {
     margin: 0 auto;
 }
 
-.subtitle {
-    font-size: 50px;
-    font-weight: 900;
-    line-height: 62.5px;
-    text-transform: uppercase;
-}
-
 .header {
     position: sticky;
     top: 0;
@@ -73,25 +66,41 @@ body {
 
 .header-container {
     display: flex;
+    justify-content: space-between;
     padding: 30px 55px;
     align-items: center;
     height: 130px;
 }
 
 .header-nav {
-    margin-right: 75px;
-    margin-left: auto;
+    margin-right: 14%;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+}
+
+.burger div {
+    background-color: var(--black);
+    height: 3px;
+    width: 100%;
 }
 
 .header-nav-list {
     display: flex;
-    gap: 77px;
+    gap: 17%;
 }
 
 .header-nav-link {
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
+    white-space: nowrap;
     color: var(--black);
     transition: color 0.3s ease-in-out;
 }
@@ -105,8 +114,8 @@ body {
 }
 
 .language-form {
-    margin-right: 74px;
     position: relative;
+    right: -2%;
     display: inline-flex;
     gap: 2px;
     border: 1px solid #BFBFBF;
@@ -139,7 +148,7 @@ body {
 }
 
 .language-label-radio {
-    opacity: 0; 
+    opacity: 0;
     width: 22px;
     height: 22px;
     position: relative;
@@ -222,7 +231,7 @@ body {
 }
 
 .hero-btn {
-    padding: 11px 32px 11px 32px;
+    padding: 11px 32px;
     border-radius: 30px;
     color: var(--grey);
     background-color: var(--green);
@@ -246,18 +255,22 @@ body {
 
 .about-lab-container {
     padding: 60px 55px 195px;
+    background-image: url('../img/block-2.svg');
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    margin-bottom: 147px;
+}
+
+.subtitle {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 62.5px;
+    text-transform: uppercase;
 }
 
 .about-lab-subtitle {
     color: var(--grey);
     margin-bottom: 82px;
-}
-
-.about-lab-container {
-    background-image: url('../img/block-2.svg');
-    background-repeat: no-repeat;
-    border-radius: 30px;
-    margin-bottom: 147px;
 }
 
 .about-lab-cards-container {
@@ -311,7 +324,7 @@ body {
 }
 
 .about-lab-description-small {
-    margin-left: 307px;
+    margin-left: 22%;
     max-width: 720px;
     color: var(--black);
     font-size: 24px;
@@ -338,7 +351,8 @@ body {
 .projects-cards-container {
     display: flex;
     gap: 32px;
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project-card {
@@ -346,9 +360,12 @@ body {
     padding-top: 415px;
     padding-left: 47px;
     padding-right: 47px;
+    width: 412px;
     height: 650px;
-    flex-basis: 33%;
     z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .project-card--2 {
@@ -506,8 +523,11 @@ body {
     padding: 86px 127px 89px 55px;
 }
 
+.footer-logo {
+    margin-right: auto;
+}
+
 .footer-nav {
-    margin-left: auto;
     margin-right: 196px;
     padding-top: 5px;
 }
@@ -556,4 +576,486 @@ body {
 
 .footer-contacts {
     padding-top: 13px;
+}
+
+@media screen and (max-width: 1249px) {
+    .burger {
+        display: flex;
+        position: relative;
+        left: 10px;
+        z-index: 20;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .header-nav-list {
+        display: none;
+    }
+
+    .header-nav-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 15;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        gap: 30px;
+        padding: 30px 10px 50px;
+        background-color: var(--grey);
+    }
+
+    .header-nav-active li {
+        text-align: center;
+    }
+
+    .language-form {
+        right: 10px;
+    }
+
+    .footer-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .header-container {
+        height: 100px;
+        padding: 17px 0px;
+    }
+
+    .hero {
+        padding: 0;
+        background-position: right 0px bottom 46px;
+        background-size: 100%;
+    }
+
+    .hero-container {
+        width: 420px;
+        padding-top: 29px;
+        padding-bottom: 227px;
+    }
+
+    .hero-title {
+        margin-bottom: 24px;
+        font-size: 46px;
+        line-height: 60px;
+    }
+
+    .hero-text {
+        margin-bottom: 36px;
+        font-size: 18px;
+    }
+
+    .hero-btn {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .about-lab-container {
+        padding: 60px 55px 50px;
+        background-position: top 14px left 0;
+        background-color: var(--green);
+    }
+
+    .subtitle {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .about-lab-subtitle {
+        margin-bottom: 52px;
+    }
+
+    .about-lab-cards-container {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-lab-card {
+        padding: 34px 30px;
+        min-height: 200px;
+        font-size: 15px;
+        line-height: 19px;
+        flex-basis: 48%;
+    }
+
+    .about-lab-description-big {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+        font-size: 33px;
+        line-height: 38px;
+    }
+
+    .about-lab-description-big--rectangle {
+        vertical-align: -6%;
+        margin-left: 3px;
+    }
+
+    .about-lab-description-big--rectangle svg {
+        width: 12%;
+        height: 12%;
+    }
+
+    .about-lab-description-big--semicircle {
+        vertical-align: -26%;
+        margin-left: -5px;
+        margin-right: -6px;
+    }
+
+    .about-lab-description-big--semicircle svg {
+        width: 3%;
+        height: 3%;
+    }
+
+    .about-lab-description-big--circle {
+        vertical-align: -8%;
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+
+    .about-lab-description-big--circle svg {
+        width: 3.5%;
+        height: 3.5%;
+    }
+
+    .about-lab-description-small {
+        margin-left: 45px;
+        margin-right: 45px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .projects {
+        padding-top: 80px;
+    }
+
+    .projects-container {
+        padding: 37px 29px 82px;
+    }
+
+    .project-card {
+        padding-top: 303px;
+        padding-left: 35px;
+        padding-right: 22px;
+        width: 380px;
+        height: 508px;
+        border-radius: 30px;
+    }
+
+    .project-card-subtitle {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .project-card-description {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .team-container {
+        padding-top: 49px;
+        padding-bottom: 64px;
+    }
+
+    .team-subtitle {
+        padding-left: 39px;
+        margin-bottom: 42px;
+    }
+
+    .team-carousel-slide-bar {
+        gap: 53px;
+    }
+
+    .team-carousel-btn-left {
+        top: 130px;
+        left: 10px;
+    }
+
+    .team-carousel-btn-right {
+        top: 130px;
+        left: 666px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 55px 26px 79px 24px;
+        background-color: var(--green);
+        background-size: 196%;
+        background-position: bottom 0px right -390px;
+    }
+
+    .footer-logo {
+        width: 33%;
+        margin-bottom: 22px;
+    }
+
+    .footer-contacts-list {
+        margin-left: 42%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 345px;
+    }
+
+    .header-container {
+        height: 62px;
+    }
+
+    .header-logo {
+        width: 68px;
+    }
+
+    .header-nav-active {
+        top: 5px;
+        padding: 50px 10px;
+    }
+
+    .header-nav-link {
+        font-size: 16px;
+    }
+
+    .contacts {
+        gap: 5px;
+    }
+
+    .contacts-item {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contacts-item svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-container {
+        width: 350px;
+        padding-top: 29px;
+        padding-bottom: 227px;
+        padding-right: 42px;
+    }
+
+    .hero-title {
+        margin-bottom: 24px;
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .hero-text {
+        margin-bottom: 26px;
+        font-size: 16px;
+    }
+
+    .hero-btn {
+        padding: 4px 22px;
+        font-size: 14px;
+    }
+
+    .about-lab-container {
+        padding: 25px 23px 23px;
+        background-position: top 0 left 0;
+        background-size: 390%;
+        margin-bottom: 49px;
+    }
+
+    .subtitle {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .about-lab-subtitle {
+        margin-bottom: 23px;
+    }
+
+    .about-lab-cards-container {
+        flex-direction: column;
+    }
+
+    .about-lab-card {
+        min-height: 142px;
+        font-size: 12px;
+        line-height: 15px;
+        flex-basis: 33%;
+    }
+
+    .about-lab-description-big {
+        margin-bottom: 31px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .about-lab-description-big--rectangle {
+        margin-left: 0;
+    }
+
+    .about-lab-description-big--rectangle-2 {
+        display: none;
+    }
+
+    .about-lab-description-big--semicircle {
+        vertical-align: -18%;
+        margin-left: -3px;
+        margin-right: -3px;
+    }
+
+    .about-lab-description-big--circle {
+        vertical-align: -6%;
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+
+    .about-lab-description-small {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .projects {
+        padding-top: 50px;
+    }
+
+    .projects-container {
+        padding: 24px 24px 63px;
+    }
+
+    .projects-subtitle {
+        margin-bottom: 23px;
+    }
+
+    .project-card {
+        padding-top: 192px;
+        padding-left: 23px;
+        padding-right: 5px;
+        width: 295px;
+        height: 365px;
+    }
+
+    .project-card-subtitle {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .project-card-description {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .project-card-link {
+        top: 23px;
+        right: 23px;
+    }
+
+    .project-card-link svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .team-container {
+        padding-top: 44px;
+        padding-bottom: 29px;
+    }
+
+    .team-subtitle {
+        padding-left: 24px;
+        margin-bottom: 23px;
+    }
+
+    .team-carousel-slide-bar {
+        gap: 80px;
+    }
+
+    .team-carousel-card {
+        padding: 24px 17px 24px 24px;
+        grid-template-areas:
+            ". photo ."
+            "name name name"
+            "role role role";
+        grid-template-columns: 52px 90px 52px;
+        grid-template-rows: 90px 44px 1fr;
+        height: 252px;
+        width: 235px;
+    }
+
+    .team-carousel-photo {
+        width: 89px;
+        height: 89px;
+    }
+
+    .team-carousel-name {
+        padding-top: 21px;
+        font-size: 18px;
+        line-height: 22.5px;
+    }
+
+    .team-carousel-role {
+        padding-top: 10px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .team-carousel-btn-left {
+        top: 106px;
+        left: 0px;
+    }
+
+    .team-carousel-btn-right {
+        top: 106px;
+        left: 319px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 24px 26px 69px 24px;
+        background-size: 294%;
+        background-position: bottom 4px right -413px;
+    }
+
+    .footer-contacts-list {
+        margin-left: 42%;
+    }
+
+    .footer-contacts-subtitle {
+        margin-bottom: 14px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .footer-contacts-item {
+        font-size: 12px;
+        line-height: 23px;
+    }
+
+    .footer-contacts-item:not(:last-child) {
+        margin-bottom: 11px;
+    }
+
+    .footer-contacts {
+        padding-top: 0px;
+    }
 }

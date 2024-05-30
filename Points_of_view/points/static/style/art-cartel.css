@@ -57,13 +57,6 @@ body {
     margin: 0 auto;
 }
 
-.subtitle {
-    font-size: 50px;
-    font-weight: 900;
-    line-height: 62.5px;
-    text-transform: uppercase;
-}
-
 .header {
     position: sticky;
     top: 0;
@@ -73,25 +66,41 @@ body {
 
 .header-container {
     display: flex;
+    justify-content: space-between;
     padding: 30px 55px;
     align-items: center;
     height: 130px;
 }
 
 .header-nav {
-    margin-right: 75px;
-    margin-left: auto;
+    margin-right: 14%;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+}
+
+.burger div {
+    background-color: var(--black);
+    height: 3px;
+    width: 100%;
 }
 
 .header-nav-list {
     display: flex;
-    gap: 77px;
+    gap: 17%;
 }
 
 .header-nav-link {
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
+    white-space: nowrap;
     color: var(--black);
     transition: color 0.3s ease-in-out;
 }
@@ -105,8 +114,8 @@ body {
 }
 
 .language-form {
-    margin-right: 74px;
     position: relative;
+    right: -2%;
     display: inline-flex;
     gap: 2px;
     border: 1px solid #BFBFBF;
@@ -139,7 +148,7 @@ body {
 }
 
 .language-label-radio {
-    opacity: 0; 
+    opacity: 0;
     width: 22px;
     height: 22px;
     position: relative;
@@ -364,4 +373,289 @@ body {
 
 .realization-item:not(:last-child) {
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1249px) {
+    .burger {
+        display: flex;
+        position: relative;
+        left: 10px;
+        z-index: 20;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .header-nav-list {
+        display: none;
+    }
+
+    .header-nav-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 15;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        gap: 30px;
+        padding: 30px 10px 50px;
+        background-color: var(--grey);
+    }
+
+    .header-nav-active li {
+        text-align: center;
+    }
+
+    .language-form {
+        right: 10px;
+    }
+
+    .footer-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .header-container {
+        height: 100px;
+        padding: 17px 0px;
+    }
+
+    .hero {
+        padding: 0;
+        background-position: right 0px bottom 46px;
+        background-size: 100%;
+    }
+
+    .hero-container {
+        width: 420px;
+        padding-top: 29px;
+        padding-bottom: 227px;
+    }
+
+    .hero-title {
+        margin-bottom: 24px;
+        font-size: 46px;
+        line-height: 60px;
+    }
+
+    .hero-text {
+        margin-bottom: 36px;
+        font-size: 18px;
+    }
+
+    .hero-btn {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .about-project-container {
+        padding: 50px 34px 34px;
+    }
+
+    .about-project-subtitle,
+    .realization-subtitle {
+        margin-bottom: 25px;
+        font-size: 38px;
+        line-height: 35px;
+    }
+
+    .about-project-wrap {
+        flex-direction: column-reverse;
+        gap: 26px;
+    }
+
+    .about-project-descr-big {
+        margin-bottom: 17px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .about-project-descr-small {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .realization-container {
+        padding: 55px 68px;
+    }
+
+    .realization-wrap {
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 26px;
+        padding-left: 1px;
+    }
+
+    .realization-text {
+        font-size: 26px;
+        margin-right: 0;
+    }
+
+    .realization-item {
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 345px;
+    }
+
+    .header-container {
+        height: 62px;
+    }
+
+    .header-logo {
+        width: 68px;
+    }
+
+    .header-nav-active {
+        top: 5px;
+        padding: 50px 10px;
+    }
+
+    .header-nav-link {
+        font-size: 16px;
+    }
+
+    .contacts {
+        gap: 5px;
+    }
+
+    .contacts-item {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contacts-item svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-container {
+        width: 350px;
+        padding-top: 29px;
+        padding-bottom: 232px;
+        padding-right: 20px;
+    }
+
+    .hero-title {
+        margin-bottom: 24px;
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-text:not(:last-child) {
+        margin-bottom: 7px;
+    }
+
+    .hero-text:last-of-type {
+        margin-bottom: 29px;
+    }
+
+    .hero-btn {
+        padding: 4px 22px;
+        font-size: 14px;
+    }
+
+    .about-project-container {
+        padding: 25px 23px 23px;
+    }
+
+    .about-project-subtitle {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .about-project-wrap {
+        flex-direction: column-reverse;
+        gap: 26px;
+    }
+
+    .about-project-descr-big {
+        margin-bottom: 17px;
+        font-size: 19px;
+        line-height: 25px;
+    }
+
+    .about-project-descr-small {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .about-project-2-container {
+        padding: 49px 24px 32px;
+    }
+
+    .about-project-2-subtitle {
+        margin-bottom: 22px;
+        font-size: 22px;
+        line-height: 27.5px;
+    }
+
+    .about-project-2-wrap {
+        gap: 22px;
+    }
+
+    .about-project-2-card {
+        min-height: 148px;
+        padding: 26px 21px 26px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .realization-subtitle {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .realization-container {
+        padding: 24px 23px 23px;
+    }
+
+    .realization-wrap {
+        gap: 20px;
+        padding-top: 26px;
+        padding-left: 1px;
+    }
+
+    .realization-text {
+        font-size: 22px;
+        line-height: 27.5px;
+        text-align: left;
+    }
+
+    .realization-item {
+        width: 297px;
+        height: 117px;
+        padding: 21px 48px;
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
