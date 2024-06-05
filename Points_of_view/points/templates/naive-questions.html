@@ -113,13 +113,32 @@
                 <p class="hero-text">
                     {% translate 'Человеку интересен человек' %}.
                 </p>
-                <button class="hero-btn" onclick="window.scrollTo({
-                    top: 730,
-                    left: 0,
-                    behavior: 'smooth'
-                    })">
+                <button class="hero-btn" id="heroBtn">
                     {% translate 'Подробнее' %}
                 </button>
+                <script>
+                    let scrollHeight;
+
+                    function resizeScrollHeight() {
+                        if (window.innerWidth < 600) {
+                            scrollHeight = 430;
+                        } else if (window.innerWidth < 1070) {
+                            scrollHeight = 620;
+                        } else {
+                            scrollHeight = 750;
+                        }
+                    };
+
+                    resizeScrollHeight();
+
+                    heroBtn.onclick = function() {
+                        window.scrollTo({
+                            top: scrollHeight,
+                            left: 0,
+                            behavior: 'smooth'
+                        })
+                    };
+                </script>
             </div>
         </section>
 
