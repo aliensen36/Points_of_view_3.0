@@ -26,6 +26,11 @@
                 {% endif %}
             </div>
             <nav class="header-nav">
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
                 <ul class="header-nav-list">
                     <li class="header-nav-item">
                         <a href="{% url 'index' %}" class="header-nav-link">
@@ -109,13 +114,32 @@
                 <p class="hero-text">
                     {% translate 'Арт-лаборатория, открывающая искусство по-новому' %}.
                 </p>
-                <button class="hero-btn" onclick="window.scrollTo({
-                    top: 660,
-                    left: 0,
-                    behavior: 'smooth'
-                    })">
+                <button class="hero-btn" id="heroBtn">
                     {% translate 'Подробнее' %}
                 </button>
+                <script>
+                    let scrollHeight;
+
+                    function resizeScrollHeight() {
+                        if (window.innerWidth < 600) {
+                            scrollHeight = 470;
+                        } else if (window.innerWidth < 1070) {
+                            scrollHeight = 520;
+                        } else {
+                            scrollHeight = 700;
+                        }
+                    };
+
+                    resizeScrollHeight();
+
+                    heroBtn.onclick = function() {
+                        window.scrollTo({
+                        top: scrollHeight,
+                        left: 0,
+                        behavior: 'smooth'
+                    })
+                    };
+                </script>
             </div>
         </section>
 
@@ -165,7 +189,7 @@
                     </svg>
                 </span>
                 {% translate 'твенного' %}
-                <span class="about-lab-description-big--rectangle">
+                <span class="about-lab-description-big--rectangle about-lab-description-big--rectangle-2">
                     <svg width="124" height="35" viewBox="0 0 124 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="124" height="35" rx="17.5" fill="#799FCC" />
                     </svg>

@@ -8,10 +8,32 @@ fetch('/api/team/')
 
 let activeCard = 0;
 const sliderPlace = document.querySelector('.team-carousel-slide-bar');
-const cardWidth = 598;
-const gap = 50;
-const initialOffset = -242;
-const widthOffset = gap + cardWidth;
+
+let initialOffset;
+let cardWidth;
+let gap;
+
+function updateSizes() {
+    if (window.innerWidth < 600) {
+        initialOffset = -260;
+        cardWidth = 235;
+        gap = 80;
+    } else if (window.innerWidth < 1070) {
+        initialOffset = -599;
+        cardWidth = 598;
+        gap = 53;
+    } else {
+        initialOffset = -242;
+        cardWidth = 598;
+        gap = 50;
+    }
+}
+
+updateSizes();
+
+window.addEventListener('resize', updateSizes);
+
+let widthOffset = gap + cardWidth;
 
 const createTeamCard = (member) => {
     const card = document.createElement('div');

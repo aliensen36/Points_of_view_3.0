@@ -26,6 +26,11 @@
                 {% endif %}
             </div>
             <nav class="header-nav">
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
                 <ul class="header-nav-list">
                     <li class="header-nav-item">
                         <a href="{% url 'index' %}" class="header-nav-link">
@@ -108,13 +113,32 @@
                 <p class="hero-text">
                     {% translate 'Прочувствуй художественное произведение' %}.
                 </p>
-                <button class="hero-btn" onclick="window.scrollTo({
-                    top: 720,
-                    left: 0,
-                    behavior: 'smooth'
-                    })">
+                <button class="hero-btn" id="heroBtn">
                     {% translate 'Подробнее' %}
                 </button>
+                <script>
+                    let scrollHeight;
+
+                    function resizeScrollHeight() {
+                        if (window.innerWidth < 600) {
+                            scrollHeight = 430;
+                        } else if (window.innerWidth < 1070) {
+                            scrollHeight = 510;
+                        } else {
+                            scrollHeight = 740;
+                        }
+                    };
+
+                    resizeScrollHeight();
+
+                    heroBtn.onclick = function() {
+                        window.scrollTo({
+                            top: scrollHeight,
+                            left: 0,
+                            behavior: 'smooth'
+                        })
+                    };
+                </script>
             </div>
         </section>
 
