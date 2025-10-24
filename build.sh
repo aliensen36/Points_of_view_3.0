@@ -8,4 +8,7 @@ pip install -r requirements.txt
 python manage.py collectstatic --noinput
 
 # Применение миграций (можно и в start command)
-# python manage.py migrate
+python manage.py migrate
+
+#Запуск
+python manage.py runserver
