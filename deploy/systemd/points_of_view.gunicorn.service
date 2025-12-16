@@ -1,0 +1,34 @@
+# deploy/systemd/points_of_view.gunicorn.service
+
+[Unit]
+Description=Gunicorn for Points_of_view Django project
+After=network.target
+# Явно указываем, что не зависит от других сервисов
+Requires=network.target
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+
+WorkingDirectory=/var/www/points_of_view
+EnvironmentFile=/var/www/points_of_view/.env
+
+ExecStart=/var/www/points_of_view/venv/bin/gunicorn points_of_view.wsgi:application \
+    --bind 127.0.0.1:8002 \
+    --workers 3 \
+    --timeout 60
+
+Restart=always
+RestartSec=3
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=points_of_view-gunicorn
+
+# Ограничения ресурсов (опционально)
+LimitNOFILE=65535
+LimitNPROC=65535
+
+[Install]
+WantedBy=multi-user.target
