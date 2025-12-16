@@ -3,30 +3,36 @@
 [Unit]
 Description=Gunicorn for Points_of_view Django project
 After=network.target
-# Явно указываем, что не зависит от других сервисов
-Requires=network.target
-After=network.target
 
 [Service]
 User=www-data
 Group=www-data
-
 WorkingDirectory=/var/www/points_of_view
-EnvironmentFile=/var/www/points_of_view/.env
 
-ExecStart=/var/www/points_of_view/venv/bin/gunicorn points_of_view.wsgi:application \
-    --bind 127.0.0.1:8002 \
+# Явно задаем переменные без .env файла
+Environment="SECRET_KEY=django-insecure-2**5s%^+=xcq!$-1y#j&!02gqd-&%re%$mh1c271wo+p$yhbty"
+Environment="DEBUG=False"
+Environment="PATH=/var/www/points_of_view/venv/bin"
+
+# Убедитесь в правильности имени WSGI модуля!
+# Если структура: /var/www/points_of_view/Points_of_view/wsgi.py
+# Тогда модуль: Points_of_view.wsgi:application
+ExecStart=/var/www/points_of_view/venv/bin/gunicorn \
     --workers 3 \
-    --timeout 60
+    --bind 127.0.0.1:8002 \
+    --timeout 60 \
+    --access-logfile - \
+    --error-logfile - \
+    Points_of_view.wsgi:application
 
 Restart=always
-RestartSec=3
+RestartSec=5
 
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=points_of_view-gunicorn
 
-# Ограничения ресурсов (опционально)
+# Лимиты ресурсов
 LimitNOFILE=65535
 LimitNPROC=65535
 
